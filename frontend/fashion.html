@@ -154,50 +154,56 @@
     </div>
 
     <main class="max-w-[1440px] mx-auto px-4 lg:px-10 py-6">
-      <!-- Category Hero Banner - Fashion Specific -->
-      <div
-        class="relative rounded-xl overflow-hidden h-[320px] sm:h-[360px] lg:h-[400px] shadow-lg group mb-8"
-      >
+      <!-- Hero Banner (Fashion) - Updated to match index.html style -->
+      <div class="col-span-12 lg:col-span-9">
         <div
-          class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-          style="
-            background-image:
-              linear-gradient(
-                to right,
-                rgba(0, 0, 0, 0.7) 0%,
-                rgba(0, 0, 0, 0.3) 50%,
-                rgba(0, 0, 0, 0.1) 100%
-              ),
-              url(&quot;https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=2070&auto=format&fit=crop&quot;);
-          "
-        ></div>
-        <div
-          class="absolute inset-0 flex flex-col justify-center px-8 md:px-16 text-white"
+          class="relative rounded-xl overflow-hidden h-[340px] sm:h-[380px] lg:h-[400px] shadow-lg group"
         >
-          <span
-            class="bg-primary text-black font-black uppercase text-xs px-3 py-1 rounded-full w-fit mb-4"
-            >Spring Collection 2024</span
+          <div
+            class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+            style="
+              background-image:
+                linear-gradient(
+                  to bottom,
+                  rgba(0, 0, 0, 0.12) 0%,
+                  rgba(0, 0, 0, 0.28) 35%,
+                  rgba(0, 0, 0, 0.58) 100%
+                ),
+                url(&quot;https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=2070&auto=format&fit=crop&quot;);
+            "
+          ></div>
+          <div
+            class="absolute inset-0 flex flex-col justify-end lg:justify-center px-5 sm:px-8 lg:px-12 pt-8 pb-6 sm:pb-8 lg:pb-0 text-white"
           >
-          <h2
-            class="text-4xl md:text-5xl lg:text-6xl font-black mb-4 max-w-2xl leading-tight"
-          >
-            Elevate Your Style
-          </h2>
-          <p class="text-lg md:text-xl mb-6 max-w-xl opacity-90">
-            Discover the latest trends in fashion. Up to
-            <span class="text-primary font-bold">60% off</span> on top brands.
-          </p>
-          <div class="flex gap-4">
-            <button
-              class="bg-primary text-white px-8 py-3 rounded-lg font-bold hover:scale-105 transition-transform"
+            <span
+              class="bg-primary text-black font-black uppercase text-[10px] sm:text-xs px-3 py-1 rounded-full w-fit mb-3 sm:mb-4"
+              >Spring Collection 2024</span
             >
-              Shop Women
-            </button>
-            <button
-              class="bg-white/20 backdrop-blur-md text-white px-8 py-3 rounded-lg font-bold border border-white/30 hover:bg-white/30 transition-all"
+            <h2
+              class="text-4xl sm:text-5xl lg:text-5xl font-black mb-3 sm:mb-4 max-w-[240px] sm:max-w-sm lg:max-w-md leading-[0.95] sm:leading-tight"
             >
-              Shop Men
-            </button>
+              Elevate Your Style
+            </h2>
+            <p
+              class="text-sm sm:text-lg lg:text-xl mb-5 sm:mb-7 lg:mb-8 opacity-95 max-w-[260px] sm:max-w-md leading-snug"
+            >
+              Discover the latest trends in fashion. Up to
+              <span class="text-primary font-bold">60% off</span> on top brands.
+            </p>
+            <div
+              class="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto"
+            >
+              <button
+                class="bg-primary text-white px-6 sm:px-8 py-3 rounded-lg font-bold hover:scale-105 transition-transform w-full sm:w-auto"
+              >
+                Shop Women
+              </button>
+              <button
+                class="bg-white/20 backdrop-blur-md text-white px-6 sm:px-8 py-3 rounded-lg font-bold border border-white/30 hover:bg-white/30 transition-all w-full sm:w-auto"
+              >
+                Shop Men
+              </button>
+            </div>
           </div>
         </div>
       </div>
