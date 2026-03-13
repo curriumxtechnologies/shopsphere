@@ -54,48 +54,19 @@
   <body
     class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100"
   >
-    <!-- Announcement Bar -->
+    <!-- Announcement Bar (unchanged) -->
     <div
       class="bg-slate-900 text-white text-xs py-2 px-4 flex justify-between items-center"
     >
       <div class="flex gap-4">
         <span class="flex items-center gap-1">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="icon-sm"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.22-1.113-.615-1.53a15.759 15.759 0 0 0-4.37-3.257 14.82 14.82 0 0 0-5.04-1.197M5.25 8.25v9.75"
-            />
-          </svg>
+          <!-- replaced svg with unicode: 🚚 -->
+          <span class="text-base">🚚</span>
           Free delivery on orders over $50
         </span>
         <span class="hidden md:flex items-center gap-1 text-primary">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="icon-sm"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M9.568 3H5.25A2.25 2.25 0 0 0 3 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 0 0 5.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 0 0 9.568 3Z"
-            />
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M6 6h.008v.008H6V6Z"
-            />
-          </svg>
+          <!-- replaced svg with unicode: 🏷️ -->
+          <span class="text-base">🏷️</span>
           20% Off your first order
         </span>
       </div>
@@ -103,7 +74,8 @@
         <a class="hover:underline" href="#">Help Center</a>
       </div>
     </div>
-    <!-- Main Header -->
+
+    <!-- Main Header (unchanged, only svg replaced) -->
     <header
       class="sticky top-0 z-50 bg-white dark:bg-slate-950 shadow-sm border-b border-slate-200 dark:border-slate-800 px-4 lg:px-20 py-4"
     >
@@ -111,20 +83,8 @@
         <!-- Logo -->
         <div class="flex items-center gap-2">
           <div class="bg-primary text-white p-1 rounded-lg">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="icon-xl"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
-              />
-            </svg>
+            <!-- replaced svg with unicode: 🛒 -->
+            <span class="text-3xl">🛒</span>
           </div>
           <h1
             class="text-2xl font-black tracking-tighter text-slate-900 dark:text-white uppercase"
@@ -135,20 +95,8 @@
         <!-- Search Bar -->
         <div class="flex-1 max-w-2xl hidden md:block">
           <div class="relative flex items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="absolute left-3 text-slate-400 icon-md"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-              />
-            </svg>
+            <!-- replaced svg with unicode: 🔍 -->
+            <span class="absolute left-3 text-slate-400 text-lg">🔍</span>
             <input
               class="w-full pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-lg focus:ring-2 focus:ring-primary text-sm"
               placeholder="Search products, brands and categories"
@@ -161,25 +109,12 @@
             </button>
           </div>
         </div>
-        <!-- User Actions -->
+        <!-- User Actions (icons replaced) -->
         <div class="flex items-center gap-6">
           <button
             class="flex items-center gap-2 hover:text-primary transition-colors"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="icon-md"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
-              />
-            </svg>
+            <span class="text-xl">👤</span>
             <div class="hidden lg:block text-left leading-tight">
               <p class="text-[10px] text-slate-500">Welcome,</p>
               <p class="text-xs font-bold">Account</p>
@@ -188,20 +123,7 @@
           <button
             class="relative flex items-center gap-2 hover:text-primary transition-colors"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="icon-md"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
-              />
-            </svg>
+            <span class="text-xl">❤️</span>
             <span
               class="absolute -top-1 -right-1 bg-primary text-white text-[10px] rounded-full w-4 h-4 flex items-center justify-center font-bold border-2 border-white"
               >0</span
@@ -211,20 +133,7 @@
           <button
             class="relative flex items-center gap-2 hover:text-primary transition-colors"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="icon-md"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
-              />
-            </svg>
+            <span class="text-xl">🛍️</span>
             <span
               class="absolute -top-1 -right-1 bg-primary text-white text-[10px] rounded-full w-4 h-4 flex items-center justify-center font-bold border-2 border-white"
               >3</span
@@ -234,194 +143,127 @@
         </div>
       </div>
     </header>
+
     <main class="max-w-[1440px] mx-auto px-4 lg:px-10 py-6">
-      <!-- Hero Section & Sidebar Navigation -->
+      <!-- Hero Section & Sidebar Navigation (MOBILE DROPDOWN ADDED) -->
       <div class="grid grid-cols-12 gap-6">
-        <!-- Sidebar -->
+        <!-- Sidebar: on mobile become dropdown, on desktop unchanged (col-span-3) -->
         <aside
-          class="col-span-12 lg:col-span-3 bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 overflow-hidden hidden lg:block"
+          class="col-span-12 lg:col-span-3 bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 overflow-hidden"
         >
-          <nav class="flex flex-col py-2">
+          <!-- Mobile dropdown (visible only on small screens) -->
+          <details class="lg:hidden w-full group">
+            <summary
+              class="flex items-center justify-between px-4 py-4 bg-slate-50 dark:bg-slate-800 text-sm font-bold cursor-pointer list-none"
+            >
+              <span class="flex items-center gap-2">
+                <!-- unicode for categories -->
+                <span class="text-lg">📋</span>
+                <span>SHOP CATEGORIES</span>
+              </span>
+              <!-- unicode arrow -->
+              <span class="text-lg transition-transform group-open:rotate-180"
+                >▼</span
+              >
+            </summary>
+            <nav
+              class="flex flex-col py-2 border-t border-slate-200 dark:border-slate-700"
+            >
+              <!-- All category links with unicode icons (shorter) -->
+              <a
+                class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 text-sm font-medium"
+                href="#"
+                ><span class="text-base">🛒</span> Supermarket</a
+              >
+              <a
+                class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 text-sm font-medium text-primary"
+                href="#"
+                ><span class="text-base">👕</span> Fashion</a
+              >
+              <a
+                class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 text-sm font-medium"
+                href="#"
+                ><span class="text-base">📱</span> Phones & Tablets</a
+              >
+              <a
+                class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 text-sm font-medium"
+                href="#"
+                ><span class="text-base">💻</span> Computing</a
+              >
+              <a
+                class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 text-sm font-medium"
+                href="#"
+                ><span class="text-base">📺</span> Electronics</a
+              >
+              <a
+                class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 text-sm font-medium"
+                href="#"
+                ><span class="text-base">🏠</span> Home & Office</a
+              >
+              <a
+                class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 text-sm font-medium"
+                href="#"
+                ><span class="text-base">💄</span> Health & Beauty</a
+              >
+              <a
+                class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 text-sm font-medium"
+                href="#"
+                ><span class="text-base">🎮</span> Gaming</a
+              >
+            </nav>
+          </details>
+          <!-- Desktop navigation (hidden on mobile, visible lg:block) -->
+          <nav class="hidden lg:block lg:flex lg:flex-col py-2">
             <a
               class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 text-sm font-medium"
               href="#"
+              ><span class="text-base">🛒</span> Supermarket</a
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="icon-sm text-slate-500"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M12 8.25v-1.5m0 1.5c-1.355 0-2.697.056-4.024.166C6.845 8.51 6 9.473 6 10.608v2.513m6-4.871c1.355 0 2.697.056 4.024.166C17.155 8.51 18 9.473 18 10.608v2.513M15 8.25v-1.5m-6 1.5v-1.5m12 9.75-4.5-4.5M6 15.75l-4.5-4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                />
-              </svg>
-              Supermarket
-            </a>
             <a
               class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 text-sm font-medium text-primary"
               href="#"
+              ><span class="text-base">👕</span> Fashion</a
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="icon-sm"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M9.568 3H5.25A2.25 2.25 0 0 0 3 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 0 0 5.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 0 0 9.568 3Z"
-                />
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6 6h.008v.008H6V6Z"
-                />
-              </svg>
-              Fashion
-            </a>
             <a
               class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 text-sm font-medium"
               href="#"
+              ><span class="text-base">📱</span> Phones & Tablets</a
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="icon-sm"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"
-                />
-              </svg>
-              Phones &amp; Tablets
-            </a>
             <a
               class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 text-sm font-medium"
               href="#"
+              ><span class="text-base">💻</span> Computing</a
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="icon-sm"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"
-                />
-              </svg>
-              Computing
-            </a>
             <a
               class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 text-sm font-medium"
               href="#"
+              ><span class="text-base">📺</span> Electronics</a
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="icon-sm"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6 20.25h12m-7.5-3v3m3-3v3m-10.125-3h17.25c.621 0 1.125-.504 1.125-1.125V4.875c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125Z"
-                />
-              </svg>
-              Electronics
-            </a>
             <a
               class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 text-sm font-medium"
               href="#"
+              ><span class="text-base">🏠</span> Home & Office</a
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="icon-sm"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
-                />
-              </svg>
-              Home &amp; Office
-            </a>
             <a
               class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 text-sm font-medium"
               href="#"
+              ><span class="text-base">💄</span> Health & Beauty</a
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="icon-sm"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z"
-                />
-              </svg>
-              Health &amp; Beauty
-            </a>
             <a
               class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 text-sm font-medium"
               href="#"
+              ><span class="text-base">🎮</span> Gaming</a
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="icon-sm"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M14.25 6.087c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.036-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959v0a.64.64 0 0 1-.657.643 48.39 48.39 0 0 1-4.163-.3c.186 1.613.293 3.25.315 4.907a10.96 10.96 0 0 1 5.754-1.016c1.23.11 2.395.418 3.467.91.118-.674.28-1.336.482-1.978a46.64 46.64 0 0 0-3.504.255.64.64 0 0 1-.643-.643v-1.74Z"
-                />
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                />
-              </svg>
-              Gaming
-            </a>
           </nav>
         </aside>
-        <!-- Hero Banner -->
+
+        <!-- Hero Banner (unchanged, only image background) -->
         <div class="col-span-12 lg:col-span-9">
           <div
             class="relative rounded-xl overflow-hidden h-[340px] sm:h-[380px] lg:h-[400px] shadow-lg group"
           >
             <div
               class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-              data-alt="Promotional banner showing modern electronics and home appliances"
               style="
                 background-image:
                   linear-gradient(
@@ -433,29 +275,24 @@
                   url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCfA0yXIE6l_z-Vg9-7Ev22T42VP-ADxyuye2buHNoWlcg6Tmzk5sjmix4uArasmCc_M44c9_VPLP2G1b_eIncRzsNGfLj9bSzdBx5Lptpu7AnIS0_AopvS1dI1riNgkZ1XRs-DD3ZO7FfDqw9UhrpEQEIxiYUUWmpCExlzGwdWSDKwhVK4uDOx7i9rfBJAvnlOffzHPMDwolhoOR0RN8TAK2IM3M4HeDuQrRCyXldCcSBBreTYj-EYQ8HNrtXB3bq2DOhwdjUGqLc&quot;);
               "
             ></div>
-
             <div
               class="absolute inset-0 flex flex-col justify-end lg:justify-center px-5 sm:px-8 lg:px-12 pt-8 pb-6 sm:pb-8 lg:pb-0 text-white"
             >
               <span
                 class="bg-primary text-black font-black uppercase text-[10px] sm:text-xs px-3 py-1 rounded-full w-fit mb-3 sm:mb-4"
+                >Limited Time Offer</span
               >
-                Limited Time Offer
-              </span>
-
               <h2
                 class="text-4xl sm:text-5xl lg:text-5xl font-black mb-3 sm:mb-4 max-w-[240px] sm:max-w-sm lg:max-w-md leading-[0.95] sm:leading-tight"
               >
                 Elevate Your Living Space
               </h2>
-
               <p
                 class="text-sm sm:text-lg lg:text-xl mb-5 sm:mb-7 lg:mb-8 opacity-95 max-w-[260px] sm:max-w-md leading-snug"
               >
                 Get up to <span class="text-primary font-bold">50% off</span> on
                 premium home appliances and kitchen essentials.
               </p>
-
               <div
                 class="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto"
               >
@@ -474,7 +311,8 @@
           </div>
         </div>
       </div>
-      <!-- Flash Sales Section -->
+
+      <!-- Flash Sales Section (unchanged, only svg replaced) -->
       <section
         class="mt-12 bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 overflow-hidden"
       >
@@ -482,20 +320,7 @@
           class="bg-red-600 text-white px-6 py-3 flex flex-wrap items-center justify-between"
         >
           <div class="flex items-center gap-4">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="icon-md"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"
-              />
-            </svg>
+            <span class="text-xl">⚡</span>
             <h3 class="text-xl font-bold uppercase tracking-wide">
               Flash Sales
             </h3>
@@ -511,35 +336,21 @@
           <a
             class="flex items-center gap-1 hover:underline font-bold text-sm uppercase"
             href="#"
-            >See All
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="icon-sm"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="m8.25 4.5 7.5 7.5-7.5 7.5"
-              />
-            </svg>
-          </a>
+            >See All <span class="text-base">➡️</span></a
+          >
         </div>
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-0">
-          <!-- Product Card Template -->
+          <!-- product cards (only unicode stars replaced) keep same layout, just replace star svg with unicode ★/☆ -->
+          <!-- card 1 -->
           <div
             class="p-4 border-r border-b border-slate-100 dark:border-slate-800 hover:shadow-xl transition-shadow bg-white dark:bg-slate-900 group"
           >
             <div class="relative aspect-square mb-4 overflow-hidden rounded-lg">
               <img
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform"
-                data-alt="High performance noise cancelling wireless headphones"
+                alt="headphones"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsJiFHy_He7mAub-2rETKsW42uciCrRe4He6uYLhNo8F3LgBpJl26uY8H7FhQ9inRkRhwkrY1FuChH_qMSBiAY2oztnsUko7O6vujfpnL9OONtBmjOEyAOHEXi2zZC3klOkNMqozuWU5xqZcILgeAEHpRYvb5kSsh6Rrslc8wnWtBFSlD6ZiMhOOnfNSnFXvjvM6JI3vzNGaYpOt5pqwiGJ9cYLaZWfwKK_BEERHUiDBEhZ9o_fpPWnxsCM8R6JVUi54VCRj7T1Dc"
-              />
-              <span
+              /><span
                 class="absolute top-2 left-2 bg-primary text-white text-[10px] font-black px-2 py-0.5 rounded"
                 >-45%</span
               >
@@ -557,68 +368,8 @@
             </div>
             <div class="mt-2 flex items-center gap-1">
               <div class="flex text-primary">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="icon-sm"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="icon-sm"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="icon-sm"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="icon-sm"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="icon-sm"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
-                  />
-                </svg>
+                <span class="text-yellow-500 text-sm">★★★★</span
+                ><span class="text-yellow-500 text-sm">☆</span>
               </div>
               <span class="text-[10px] text-slate-400">(128)</span>
             </div>
@@ -628,16 +379,16 @@
               Add to Cart
             </button>
           </div>
+          <!-- card 2 -->
           <div
             class="p-4 border-r border-b border-slate-100 dark:border-slate-800 hover:shadow-xl transition-shadow bg-white dark:bg-slate-900 group"
           >
             <div class="relative aspect-square mb-4 overflow-hidden rounded-lg">
               <img
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform"
-                data-alt="Modern minimalist aesthetic mechanical keyboard"
+                alt="keyboard"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiqs1ViSOAieIHm6BCGvRRwhUQR0Yjkn4zulkPGo6n1ugjp4F0EqEr8qDvAiTFPhsvGP35eSdKp7YaTpp66WE8jjp9JcjsgaRthq3aNaemMzXdDHJO5Z4itvIHxeotcF-sxTQ35ixR1WnMTcPZ9YbJuaOJxGLek3WsAps2E1tChYKveEttZ_mdQUA5TojpZL4zElhI2gzTTAQxR6uLDg65v2QH3WdHaNgJJj-8rvuTYMf9rsarclkP6i6k-HdBHr7fw-iBWzwlJQU"
-              />
-              <span
+              /><span
                 class="absolute top-2 left-2 bg-primary text-white text-[10px] font-black px-2 py-0.5 rounded"
                 >-15%</span
               >
@@ -655,66 +406,7 @@
             </div>
             <div class="mt-2 flex items-center gap-1">
               <div class="flex text-primary">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="icon-sm"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="icon-sm"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="icon-sm"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="icon-sm"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="icon-sm"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
+                <span class="text-yellow-500 text-sm">★★★★★</span>
               </div>
               <span class="text-[10px] text-slate-400">(45)</span>
             </div>
@@ -724,16 +416,16 @@
               Add to Cart
             </button>
           </div>
+          <!-- card 3 -->
           <div
             class="p-4 border-r border-b border-slate-100 dark:border-slate-800 hover:shadow-xl transition-shadow bg-white dark:bg-slate-900 group"
           >
             <div class="relative aspect-square mb-4 overflow-hidden rounded-lg">
               <img
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform"
-                data-alt="Stainless steel smart water bottle with temperature display"
+                alt="water bottle"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgamM1jCbZoffqb5M-H-yGYT0gCWJfA47km9UMwcns-Kx444sgycDCdJARId6IuvB0oLSvvYlry9TjkLf445Akli8PGOFFj4sAIcFPz85k9UHY-IEE6XavDpDYWTfvmjt3_NXQED07a19zkvxMRrcAiNqJhNOgj3olCUyfJ-vt3zN4qna1akIp9EECBZFIj-Oxuv8LU-tws0jsHPcROUTWE1qSPXk0XX6C-U6H9FR27hpeB0aboAOv0TjTOzlUkQLTDqqcNPyrC5k"
-              />
-              <span
+              /><span
                 class="absolute top-2 left-2 bg-primary text-white text-[10px] font-black px-2 py-0.5 rounded"
                 >-30%</span
               >
@@ -751,70 +443,8 @@
             </div>
             <div class="mt-2 flex items-center gap-1">
               <div class="flex text-primary">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="icon-sm"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="icon-sm"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="icon-sm"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="icon-sm"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
-                  />
-                </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="icon-sm"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
-                  />
-                </svg>
+                <span class="text-yellow-500 text-sm">★★★</span
+                ><span class="text-yellow-500 text-sm">☆☆</span>
               </div>
               <span class="text-[10px] text-slate-400">(89)</span>
             </div>
@@ -824,16 +454,16 @@
               Add to Cart
             </button>
           </div>
+          <!-- card 4 -->
           <div
             class="p-4 border-r border-b border-slate-100 dark:border-slate-800 hover:shadow-xl transition-shadow bg-white dark:bg-slate-900 group"
           >
             <div class="relative aspect-square mb-4 overflow-hidden rounded-lg">
               <img
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform"
-                data-alt="High resolution professional mirrorless camera"
+                alt="camera"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpVvcxZZGB3FPPX_9DOJV0IlyNi3vglbEOrzwcjz7QD8P1whJOnTIPvEAI66GbQroq5zjbYnq9Vl5u339-RPLK0Y5Kr5stT74orEIsib_KrV-6nf7A456_JhZfmL8Yza_nCaARha84myrhKKsimwpJyqgTyvbX_xmpewgapaZWTMB-809k_9x3KZodH6dYW3G5nEuE8adrNtRJz4NYE_SSN2iBBe2PpcARtAYvhgtbIVqq8ZRoJkT5CNc8A1FDfFEuxrjlZCbvwSg"
-              />
-              <span
+              /><span
                 class="absolute top-2 left-2 bg-primary text-white text-[10px] font-black px-2 py-0.5 rounded"
                 >-20%</span
               >
@@ -851,66 +481,7 @@
             </div>
             <div class="mt-2 flex items-center gap-1">
               <div class="flex text-primary">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="icon-sm"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="icon-sm"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="icon-sm"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="icon-sm"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="icon-sm"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
+                <span class="text-yellow-500 text-sm">★★★★★</span>
               </div>
               <span class="text-[10px] text-slate-400">(31)</span>
             </div>
@@ -920,16 +491,16 @@
               Add to Cart
             </button>
           </div>
+          <!-- card 5 -->
           <div
             class="p-4 border-r border-b border-slate-100 dark:border-slate-800 hover:shadow-xl transition-shadow bg-white dark:bg-slate-900 group"
           >
             <div class="relative aspect-square mb-4 overflow-hidden rounded-lg">
               <img
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform"
-                data-alt="Ergonomic leather executive office chair"
+                alt="office chair"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdvzWc5I3lIha-1Q_lKGKpUnMK_nIeB5U3sB4ZiCQbjEpTL7es_DmElFTJTdZ3xEjoIvZ-0doAzn3s8nV1It1Y_F0TeSIPFNliqGBPs09-UEJ0CaZAYCSOR6zahtyP1RMxb8p0uvBNQbGX9ZpYHiMsb6nkR38onlqr-1-BjHA7yZUZ0_n5RzffOESKcip8UxqvYXAD2eBs0bZRoR9KtHI90ZXmE055-Bjih451I0smT8MCW9tkc4CUHMxN1M0tb2MZ8fMya4xVHrM"
-              />
-              <span
+              /><span
                 class="absolute top-2 left-2 bg-primary text-white text-[10px] font-black px-2 py-0.5 rounded"
                 >-60%</span
               >
@@ -947,68 +518,8 @@
             </div>
             <div class="mt-2 flex items-center gap-1">
               <div class="flex text-primary">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="icon-sm"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="icon-sm"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="icon-sm"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="icon-sm"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="icon-sm"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
-                  />
-                </svg>
+                <span class="text-yellow-500 text-sm">★★★★</span
+                ><span class="text-yellow-500 text-sm">☆</span>
               </div>
               <span class="text-[10px] text-slate-400">(256)</span>
             </div>
@@ -1018,16 +529,16 @@
               Add to Cart
             </button>
           </div>
+          <!-- card 6 -->
           <div
             class="p-4 border-b border-slate-100 dark:border-slate-800 hover:shadow-xl transition-shadow bg-white dark:bg-slate-900 group"
           >
             <div class="relative aspect-square mb-4 overflow-hidden rounded-lg">
               <img
                 class="w-full h-full object-cover group-hover:scale-110 transition-transform"
-                data-alt="Portable mini coffee maker for travelers"
+                alt="coffee maker"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_POo9oacWjgcv90WaG68U01ftNB1-l_hnhPVxhjv5DnOdIidY2bZovDu9PsAC_KfiC-pG-g8JUUSSzkJv-pzDvyzZbiar_Ek46RFJLozsSh9oVFiYO5zKSraLaWXYreMyscM7WksRXwE1MAowoTG0V68rI6OkoZ_y9IHC-rT3lOW-wtklZOlHGTsh4dkPlLetFhjtCZKxnca19OSKW-WKDgWNrBU26113_fgrIfWF8Ugj6x4917zly5-IcqeAaAFZJL_-WLt1Tpg"
-              />
-              <span
+              /><span
                 class="absolute top-2 left-2 bg-primary text-white text-[10px] font-black px-2 py-0.5 rounded"
                 >-10%</span
               >
@@ -1045,66 +556,7 @@
             </div>
             <div class="mt-2 flex items-center gap-1">
               <div class="flex text-primary">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="icon-sm"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="icon-sm"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="icon-sm"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="icon-sm"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="icon-sm"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
+                <span class="text-yellow-500 text-sm">★★★★★</span>
               </div>
               <span class="text-[10px] text-slate-400">(15)</span>
             </div>
@@ -1116,7 +568,8 @@
           </div>
         </div>
       </section>
-      <!-- Categories & Top Deals Grid -->
+
+      <!-- Categories & Top Deals Grid (unchanged, only icons replaced) -->
       <section class="mt-12">
         <h3 class="text-xl font-bold mb-6 text-slate-900 dark:text-white">
           Shop By Category
@@ -1129,20 +582,9 @@
             <div
               class="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-primary transition-colors"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="icon-lg text-primary group-hover:text-white"
+              <span class="text-3xl group-hover:text-white text-primary"
+                >📱</span
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"
-                />
-              </svg>
             </div>
             <p class="text-sm font-bold">Phones</p>
           </a>
@@ -1153,20 +595,9 @@
             <div
               class="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-primary transition-colors"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="icon-lg text-primary group-hover:text-white"
+              <span class="text-3xl group-hover:text-white text-primary"
+                >📺</span
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6 20.25h12m-7.5-3v3m3-3v3m-10.125-3h17.25c.621 0 1.125-.504 1.125-1.125V4.875c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125Z"
-                />
-              </svg>
             </div>
             <p class="text-sm font-bold">Televisions</p>
           </a>
@@ -1177,20 +608,9 @@
             <div
               class="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-primary transition-colors"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="icon-lg text-primary group-hover:text-white"
+              <span class="text-3xl group-hover:text-white text-primary"
+                >💻</span
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"
-                />
-              </svg>
             </div>
             <p class="text-sm font-bold">Laptops</p>
           </a>
@@ -1201,20 +621,9 @@
             <div
               class="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-primary transition-colors"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="icon-lg text-primary group-hover:text-white"
+              <span class="text-3xl group-hover:text-white text-primary"
+                >🧊</span
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M9.75 3.104v5.714a2.25 2.25 0 0 1-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 0 1 4.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0 1 12 15a9.065 9.065 0 0 0-6.23-.693L5 14.5m14.8.8 1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0 1 12 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"
-                />
-              </svg>
             </div>
             <p class="text-sm font-bold">Appliances</p>
           </a>
@@ -1225,20 +634,9 @@
             <div
               class="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-primary transition-colors"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="icon-lg text-primary group-hover:text-white"
+              <span class="text-3xl group-hover:text-white text-primary"
+                >⌚</span
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                />
-              </svg>
             </div>
             <p class="text-sm font-bold">Watches</p>
           </a>
@@ -1249,26 +647,16 @@
             <div
               class="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3 group-hover:bg-primary transition-colors"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="icon-lg text-primary group-hover:text-white"
+              <span class="text-3xl group-hover:text-white text-primary"
+                >🔲</span
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z"
-                />
-              </svg>
             </div>
             <p class="text-sm font-bold">All</p>
           </a>
         </div>
       </section>
-      <!-- Trending Products Section -->
+
+      <!-- Trending Products (unchanged, only icons replaced) -->
       <section class="mt-12">
         <div class="flex items-center justify-between mb-6">
           <h3 class="text-xl font-bold text-slate-900 dark:text-white">
@@ -1279,33 +667,19 @@
           >
         </div>
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
-          <!-- Trending Card 1 -->
+          <!-- card 1 -->
           <div
             class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100 dark:border-slate-800"
           >
             <div class="relative aspect-[4/3]">
               <img
                 class="w-full h-full object-cover"
-                data-alt="Stylish minimalist leather sneakers in white and tan"
+                alt="sneakers"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtYoQ-SeFE13LOtUqcdMD3Uh3zT6U_yUwg02maV66dp6EoImdsK3lHhn232DbXHhKQqy6ga3UMfu0vCklU8XaW2vzI23bSfof8iurXblM-W8Ark0re73Hy830xLrDvOG-VnS6qv85nlTrnJaPgBja3AfACpt4MIZ9mH9gb4vX83Hw1j3JOETaAv_TSQ45TrBlzjV8VfiMziTTXgDDRp-oEaRAXTaFvkg4o3dSWoTGI0X5vrQl4Aoqq-Cm_e7eYfTciRdXl8yxfnTE"
-              />
-              <button
+              /><button
                 class="absolute top-3 right-3 p-1.5 bg-white rounded-full shadow-md text-slate-400 hover:text-red-500 transition-colors"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="icon-md"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
-                  />
-                </svg>
+                <span class="text-lg">❤️</span>
               </button>
             </div>
             <div class="p-4">
@@ -1316,55 +690,28 @@
                 Urban Minimalist Leather Sneakers
               </h4>
               <div class="flex items-center justify-between mt-4">
-                <span class="text-xl font-black text-primary">$120.00</span>
-                <button
+                <span class="text-xl font-black text-primary">$120.00</span
+                ><button
                   class="bg-slate-100 dark:bg-slate-800 p-2 rounded-lg hover:bg-primary hover:text-white transition-all"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="icon-md"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
-                    />
-                  </svg>
+                  <span class="text-lg">🛒</span>
                 </button>
               </div>
             </div>
           </div>
-          <!-- Trending Card 2 -->
+          <!-- card 2 -->
           <div
             class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100 dark:border-slate-800"
           >
             <div class="relative aspect-[4/3]">
               <img
                 class="w-full h-full object-cover"
-                data-alt="High tech smartwatch with vibrant display"
+                alt="smartwatch"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnIFZEDj8H7uZwgZg4nmEhnVcf1ry7H64NMXI4yq5F3QJGmrtVzKH8oBbekyYHS9c9oabvjd6SaWsYrF0n8SZ0qJjJ95cOvdm2WtdPLpl-h2ncHRfbMBuXxaol9vy-uDL0f6_ABsFegGm14MyWNC8jivsQ2kZzxco-a1F41yiJs6VvIUBQS6Fx78TC6tvtgnMvHyOjLP4ADiIIArcpuhyDrrapjEp9PkRI-R4VLz1TsFhZJDGw-Mse5oJFHhlGP9pSv86CkGC2_0w"
-              />
-              <button
+              /><button
                 class="absolute top-3 right-3 p-1.5 bg-white rounded-full shadow-md text-slate-400 hover:text-red-500 transition-colors"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="icon-md"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
-                  />
-                </svg>
+                <span class="text-lg">❤️</span>
               </button>
             </div>
             <div class="p-4">
@@ -1375,55 +722,28 @@
                 Series X Smartwatch Gen 2
               </h4>
               <div class="flex items-center justify-between mt-4">
-                <span class="text-xl font-black text-primary">$299.00</span>
-                <button
+                <span class="text-xl font-black text-primary">$299.00</span
+                ><button
                   class="bg-slate-100 dark:bg-slate-800 p-2 rounded-lg hover:bg-primary hover:text-white transition-all"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="icon-md"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
-                    />
-                  </svg>
+                  <span class="text-lg">🛒</span>
                 </button>
               </div>
             </div>
           </div>
-          <!-- Trending Card 3 -->
+          <!-- card 3 -->
           <div
             class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100 dark:border-slate-800"
           >
             <div class="relative aspect-[4/3]">
               <img
                 class="w-full h-full object-cover"
-                data-alt="Sleek silver ultra-slim portable laptop"
+                alt="laptop"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRN8W9n2syZVY8zDUY_zsn9s_hDyzbmyFOx4RuEwh4-ryMldXnjOEENqr65yhXa9X4fzL2xIp4TZzia8MJRx-SqKfT_O1UiCAisavMIDxMktLG7_rUjtYQ-Js6UnST9xKp40OPyga-woZrCMH4Bx6ziXP0YMmEMeN2zNiKn8NYUvrnkRbqt9Hc800POrWEaIOL-jZhjTKrdLI_jCExaSCOm_i2CkzCHn_9H0yHcMJnrwSUrIJYPRkQT7askGnBzpUS-TX_1Tr_DNg"
-              />
-              <button
+              /><button
                 class="absolute top-3 right-3 p-1.5 bg-white rounded-full shadow-md text-slate-400 hover:text-red-500 transition-colors"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="icon-md"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
-                  />
-                </svg>
+                <span class="text-lg">❤️</span>
               </button>
             </div>
             <div class="p-4">
@@ -1434,55 +754,28 @@
                 AeroBook Pro 13" M3 Chip
               </h4>
               <div class="flex items-center justify-between mt-4">
-                <span class="text-xl font-black text-primary">$1,249.00</span>
-                <button
+                <span class="text-xl font-black text-primary">$1,249.00</span
+                ><button
                   class="bg-slate-100 dark:bg-slate-800 p-2 rounded-lg hover:bg-primary hover:text-white transition-all"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="icon-md"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
-                    />
-                  </svg>
+                  <span class="text-lg">🛒</span>
                 </button>
               </div>
             </div>
           </div>
-          <!-- Trending Card 4 -->
+          <!-- card 4 -->
           <div
             class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100 dark:border-slate-800"
           >
             <div class="relative aspect-[4/3]">
               <img
                 class="w-full h-full object-cover"
-                data-alt="Portable mini-projector with clear image projection"
+                alt="projector"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMBGuqlQgqz-gy-uOjb265BmU4bAMiVaYTgVmsoReJMiNUh08bmO9VjLwCgrSIHIepCCIRNR0dNuddZHpzhLwR2TiWNWtY8QbQ7PlU2rCrazFGKldgpGThy_ndFnp-8wgPeSafEl6RQiT6fgQYcZVZfZ-pSioY3VS3zmuMn0c-xx7UJdLe9xRtc5-FLXBmwRcXbUIAGJDOPnwvUXtRENOqj66QI29G1uB_2ChoJ4gwBv8bWs4O6alzM3nBKnm_tcnbldnrmnwqKRc"
-              />
-              <button
+              /><button
                 class="absolute top-3 right-3 p-1.5 bg-white rounded-full shadow-md text-slate-400 hover:text-red-500 transition-colors"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="icon-md"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
-                  />
-                </svg>
+                <span class="text-lg">❤️</span>
               </button>
             </div>
             <div class="p-4">
@@ -1493,31 +786,19 @@
                 Mini Home Theater Projector
               </h4>
               <div class="flex items-center justify-between mt-4">
-                <span class="text-xl font-black text-primary">$189.00</span>
-                <button
+                <span class="text-xl font-black text-primary">$189.00</span
+                ><button
                   class="bg-slate-100 dark:bg-slate-800 p-2 rounded-lg hover:bg-primary hover:text-white transition-all"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="icon-md"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
-                    />
-                  </svg>
+                  <span class="text-lg">🛒</span>
                 </button>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- Newsletter Section -->
+
+      <!-- Newsletter Section (unchanged, only unicode) -->
       <section
         class="mt-20 bg-primary/10 rounded-2xl p-8 lg:p-12 border border-primary/20"
       >
@@ -1538,8 +819,7 @@
               class="flex-1 px-6 py-4 rounded-xl bg-white dark:bg-slate-800 border-none focus:ring-2 focus:ring-primary shadow-sm"
               placeholder="Enter your email address"
               type="email"
-            />
-            <button
+            /><button
               class="bg-primary text-white font-bold px-10 py-4 rounded-xl shadow-lg hover:scale-105 transition-transform uppercase tracking-wider"
             >
               Subscribe
@@ -1548,7 +828,8 @@
         </div>
       </section>
     </main>
-    <!-- Footer -->
+
+    <!-- Footer (unchanged, only icons replaced) -->
     <footer class="mt-20 bg-slate-900 text-slate-300 py-16 px-4 lg:px-20">
       <div
         class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12"
@@ -1556,20 +837,7 @@
         <div class="lg:col-span-2">
           <div class="flex items-center gap-2 mb-6 text-white">
             <div class="bg-primary p-1 rounded">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="icon-lg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
-                />
-              </svg>
+              <span class="text-2xl">🛒</span>
             </div>
             <h2 class="text-2xl font-black tracking-tighter uppercase">
               ShopSphere
@@ -1584,65 +852,18 @@
             <a
               class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
               href="#"
+              ><span class="text-lg">🌐</span></a
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="icon-md"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"
-                />
-              </svg>
-            </a>
             <a
               class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
               href="#"
+              ><span class="text-lg">📱</span></a
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="icon-md"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.96 2.186 2.25 2.25 0 0 0-3.96-2.186Zm0-12.814a2.25 2.25 0 1 0 3.96-2.186 2.25 2.25 0 0 0-3.96 2.186Z"
-                />
-              </svg>
-            </a>
             <a
               class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
               href="#"
+              ><span class="text-lg">📷</span></a
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="icon-md"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6.827 6.175A2.31 2.31 0 0 1 5.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 0 0-1.134-.175 2.31 2.31 0 0 1-1.64-1.055l-.822-1.316a2.192 2.192 0 0 0-1.736-1.039 48.774 48.774 0 0 0-5.232 0 2.192 2.192 0 0 0-1.736 1.039l-.821 1.316Z"
-                />
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M16.5 12.75a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0ZM18.75 10.5h.008v.008h-.008V10.5Z"
-                />
-              </svg>
-            </a>
           </div>
         </div>
         <div>
@@ -1698,17 +919,17 @@
             </li>
             <li>
               <a class="hover:text-primary transition-colors" href="#"
-                >Shipping &amp; Delivery</a
+                >Shipping & Delivery</a
               >
             </li>
             <li>
               <a class="hover:text-primary transition-colors" href="#"
-                >Returns &amp; Refunds</a
+                >Returns & Refunds</a
               >
             </li>
             <li>
               <a class="hover:text-primary transition-colors" href="#"
-                >Terms &amp; Conditions</a
+                >Terms & Conditions</a
               >
             </li>
           </ul>
@@ -1728,8 +949,7 @@
                 type="email"
                 placeholder="Your email address"
                 class="bg-slate-800 border border-slate-700 rounded-xl p-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-primary transition-colors"
-              />
-              <button
+              /><button
                 class="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-4 rounded-xl transition-colors"
               >
                 Subscribe
@@ -1743,9 +963,9 @@
       >
         <p>© 2019 ShopSphere E-Commerce Ltd. All rights reserved.</p>
         <div class="flex gap-6">
-          <a class="hover:underline" href="#">Privacy Policy</a>
-          <a class="hover:underline" href="#">Cookie Policy</a>
-          <a class="hover:underline" href="#">Accessibility</a>
+          <a class="hover:underline" href="#">Privacy Policy</a
+          ><a class="hover:underline" href="#">Cookie Policy</a
+          ><a class="hover:underline" href="#">Accessibility</a>
         </div>
       </div>
     </footer>
