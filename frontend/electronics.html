@@ -1,0 +1,1715 @@
+<!doctype html>
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#ff9900",
+              "background-light": "#f8f7f5",
+              "background-dark": "#231b0f",
+            },
+            fontFamily: {
+              display: ["Inter"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .icon-sm {
+        width: 1rem;
+        height: 1rem;
+      }
+      .icon-md {
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+      .icon-lg {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+      .icon-xl {
+        width: 2rem;
+        height: 2rem;
+      }
+    </style>
+    <title>ShopSphere | Electronics</title>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100"
+  >
+    <!-- Announcement Bar -->
+    <div
+      class="bg-slate-900 text-white text-xs py-2 px-4 flex justify-between items-center"
+    >
+      <div class="flex gap-4">
+        <span class="flex items-center gap-1">
+          <span class="text-base">🚚</span>
+          Free delivery on orders over $50
+        </span>
+        <span class="hidden md:flex items-center gap-1 text-primary">
+          <span class="text-base">🏷️</span>
+          20% Off your first order
+        </span>
+      </div>
+      <div class="flex gap-4">
+        <a class="hover:underline" href="#">Help Center</a>
+      </div>
+    </div>
+
+    <!-- Main Header -->
+    <header
+      class="sticky top-0 z-50 bg-white dark:bg-slate-950 shadow-sm border-b border-slate-200 dark:border-slate-800 px-4 lg:px-20 py-4"
+    >
+      <div class="max-w-[1440px] mx-auto flex items-center gap-8">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <div class="bg-primary text-white p-1 rounded-lg">
+            <span class="text-3xl">🛒</span>
+          </div>
+          <h1
+            class="text-2xl font-black tracking-tighter text-slate-900 dark:text-white uppercase"
+          >
+            ShopSphere
+          </h1>
+        </div>
+        <!-- Search Bar -->
+        <div class="flex-1 max-w-2xl hidden md:block">
+          <div class="relative flex items-center">
+            <span class="absolute left-3 text-slate-400 text-lg">🔍</span>
+            <input
+              class="w-full pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-lg focus:ring-2 focus:ring-primary text-sm"
+              placeholder="Search for TVs, audio, cameras, accessories..."
+              type="text"
+            />
+            <button
+              class="ml-2 bg-primary text-white px-6 py-2 rounded-lg font-bold hover:bg-opacity-90 transition-colors uppercase text-sm shadow-sm"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+        <!-- User Actions -->
+        <div class="flex items-center gap-6">
+          <button
+            class="flex items-center gap-2 hover:text-primary transition-colors"
+          >
+            <span class="text-xl">👤</span>
+            <div class="hidden lg:block text-left leading-tight">
+              <p class="text-[10px] text-slate-500">Welcome,</p>
+              <p class="text-xs font-bold">Account</p>
+            </div>
+          </button>
+          <button
+            class="relative flex items-center gap-2 hover:text-primary transition-colors"
+          >
+            <span class="text-xl">❤️</span>
+            <span
+              class="absolute -top-1 -right-1 bg-primary text-white text-[10px] rounded-full w-4 h-4 flex items-center justify-center font-bold border-2 border-white"
+              >0</span
+            >
+            <p class="hidden lg:block text-xs font-bold">Wishlist</p>
+          </button>
+          <button
+            class="relative flex items-center gap-2 hover:text-primary transition-colors"
+          >
+            <span class="text-xl">🛍️</span>
+            <span
+              class="absolute -top-1 -right-1 bg-primary text-white text-[10px] rounded-full w-4 h-4 flex items-center justify-center font-bold border-2 border-white"
+              >2</span
+            >
+            <p class="hidden lg:block text-xs font-bold">Cart</p>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div
+      class="max-w-[1440px] mx-auto px-4 lg:px-10 pt-4 text-xs text-slate-500"
+    >
+      <a href="/frontend/index.html" class="hover:text-primary">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-slate-900 dark:text-slate-300 font-medium"
+        >Electronics</span
+      >
+    </div>
+
+    <main class="max-w-[1440px] mx-auto px-4 lg:px-10 py-6">
+      <!-- Category Hero Banner - Electronics Specific -->
+      <div
+        class="relative rounded-xl overflow-hidden h-[320px] sm:h-[360px] lg:h-[400px] shadow-lg group mb-8"
+      >
+        <div
+          class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+          style="
+            background-image:
+              linear-gradient(
+                to right,
+                rgba(0, 0, 0, 0.8) 0%,
+                rgba(30, 60, 120, 0.7) 50%,
+                rgba(60, 120, 200, 0.5) 100%
+              ),
+              url(&quot;https://images.unsplash.com/photo-1550009158-9ebf69173e03?q=80&w=2101&auto=format&fit=crop&quot;);
+          "
+        ></div>
+        <div
+          class="absolute inset-0 flex flex-col justify-center px-8 md:px-16 text-white"
+        >
+          <span
+            class="bg-primary text-black font-black uppercase text-xs px-3 py-1 rounded-full w-fit mb-4"
+            >Tech Week Sale</span
+          >
+          <h2
+            class="text-4xl md:text-5xl lg:text-6xl font-black mb-4 max-w-2xl leading-tight"
+          >
+            Experience The Future
+          </h2>
+          <p class="text-lg md:text-xl mb-6 max-w-xl opacity-90">
+            Premium electronics. Up to
+            <span class="text-primary font-bold">40% off</span> on TVs, audio &
+            cameras.
+          </p>
+          <div class="flex gap-4">
+            <button
+              class="bg-primary text-white px-8 py-3 rounded-lg font-bold hover:scale-105 transition-transform"
+            >
+              Shop TVs
+            </button>
+            <button
+              class="bg-white/20 backdrop-blur-md text-white px-8 py-3 rounded-lg font-bold border border-white/30 hover:bg-white/30 transition-all"
+            >
+              Audio Deals
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content Area with Sidebar -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <!-- Sidebar Filters - Mobile Collapsible, Desktop Always Visible -->
+        <aside class="lg:col-span-3">
+          <!-- Mobile Filter Toggle -->
+          <details
+            class="lg:hidden w-full mb-4 bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800"
+          >
+            <summary
+              class="flex items-center justify-between px-4 py-4 bg-slate-50 dark:bg-slate-800 text-sm font-bold cursor-pointer list-none rounded-xl"
+            >
+              <span class="flex items-center gap-2">
+                <span class="text-lg">🔍</span>
+                <span>FILTERS & CATEGORIES</span>
+              </span>
+              <span class="text-lg transition-transform group-open:rotate-180"
+                >▼</span
+              >
+            </summary>
+            <div class="p-4 border-t border-slate-200 dark:border-slate-700">
+              <!-- Mobile Filter Content -->
+              <div class="space-y-6">
+                <!-- Categories -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3 flex items-center gap-2">
+                    <span class="text-primary">📺</span> Categories
+                  </h4>
+                  <ul class="space-y-2 text-sm">
+                    <li>
+                      <a href="#" class="text-primary font-medium"
+                        >All Electronics</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary">Televisions</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary">Home Audio</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary">Headphones</a>
+                    </li>
+                    <li><a href="#" class="hover:text-primary">Cameras</a></li>
+                    <li>
+                      <a href="#" class="hover:text-primary">Wearables</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary">Smart Home</a>
+                    </li>
+                    <li><a href="#" class="hover:text-primary">Gaming</a></li>
+                    <li><a href="#" class="hover:text-primary">Drones</a></li>
+                  </ul>
+                </div>
+
+                <!-- Price Range -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3">💰 Price Range</h4>
+                  <div class="space-y-2">
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Under $50</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      $50 - $100</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      $100 - $250</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      $250 - $500</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      $500 - $1,000</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Over $1,000</label
+                    >
+                  </div>
+                </div>
+
+                <!-- Brands -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3">🏷️ Brands</h4>
+                  <div class="space-y-2">
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Sony</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Samsung</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      LG</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Bose</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Sonos</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Apple</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      GoPro</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      DJI</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Canon</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Nikon</label
+                    >
+                  </div>
+                </div>
+
+                <!-- TV Size (conditional) -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3">📏 Screen Size</h4>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                      >32"</span
+                    >
+                    <span
+                      class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                      >43"</span
+                    >
+                    <span
+                      class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                      >50"</span
+                    >
+                    <span
+                      class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                      >55"</span
+                    >
+                    <span
+                      class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                      >65"</span
+                    >
+                    <span
+                      class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                      >75"+</span
+                    >
+                  </div>
+                </div>
+
+                <!-- Resolution -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3">🔮 Resolution</h4>
+                  <div class="space-y-2">
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      HD Ready</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Full HD</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      4K Ultra HD</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      8K</label
+                    >
+                  </div>
+                </div>
+
+                <!-- Audio Features -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3">🎧 Audio Features</h4>
+                  <div class="space-y-2">
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Wireless</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Noise Cancelling</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Bluetooth</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Waterproof</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Surround Sound</label
+                    >
+                  </div>
+                </div>
+
+                <!-- Camera Features -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3">📸 Camera Type</h4>
+                  <div class="space-y-2">
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      DSLR</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Mirrorless</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Point & Shoot</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Action Cam</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      360° Camera</label
+                    >
+                  </div>
+                </div>
+
+                <!-- Connectivity -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3">📶 Connectivity</h4>
+                  <div class="space-y-2">
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Wi-Fi</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Bluetooth</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      HDMI</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      USB-C</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      AirPlay</label
+                    >
+                  </div>
+                </div>
+
+                <!-- Ratings -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3">⭐ Customer Ratings</h4>
+                  <div class="space-y-2">
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      ★★★★ & up (2.1k)</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      ★★★ & up (3.8k)</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      ★★ & up (5.2k)</label
+                    >
+                  </div>
+                </div>
+
+                <!-- Discount -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3">🏷️ Discount</h4>
+                  <div class="space-y-2">
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      10% or more</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      20% or more</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      30% or more</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      40% or more</label
+                    >
+                  </div>
+                </div>
+
+                <!-- Availability -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3">📦 Availability</h4>
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    In Stock</label
+                  >
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <!-- Desktop Filters -->
+          <div
+            class="hidden lg:block bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 p-5 sticky top-24"
+          >
+            <h3 class="font-bold text-lg mb-5 flex items-center gap-2">
+              <span class="text-primary text-xl">🔍</span> Filters
+            </h3>
+            <div class="space-y-6 max-h-[600px] overflow-y-auto pr-2">
+              <!-- Categories -->
+              <div>
+                <h4 class="font-bold text-sm mb-3 flex items-center gap-2">
+                  <span class="text-primary">📺</span> Categories
+                </h4>
+                <ul class="space-y-2 text-sm">
+                  <li>
+                    <a href="#" class="text-primary font-medium"
+                      >All Electronics</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-primary">Televisions</a>
+                  </li>
+                  <li><a href="#" class="hover:text-primary">Home Audio</a></li>
+                  <li><a href="#" class="hover:text-primary">Headphones</a></li>
+                  <li><a href="#" class="hover:text-primary">Cameras</a></li>
+                  <li><a href="#" class="hover:text-primary">Wearables</a></li>
+                  <li><a href="#" class="hover:text-primary">Smart Home</a></li>
+                  <li><a href="#" class="hover:text-primary">Gaming</a></li>
+                  <li><a href="#" class="hover:text-primary">Drones</a></li>
+                </ul>
+              </div>
+
+              <!-- Price Range -->
+              <div>
+                <h4 class="font-bold text-sm mb-3">💰 Price Range</h4>
+                <div class="space-y-2">
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Under $50</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    $50 - $100</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    $100 - $250</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    $250 - $500</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    $500 - $1,000</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Over $1,000</label
+                  >
+                </div>
+              </div>
+
+              <!-- Brands -->
+              <div>
+                <h4 class="font-bold text-sm mb-3">🏷️ Brands</h4>
+                <div class="space-y-2">
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Sony</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Samsung</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    LG</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Bose</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Sonos</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Apple</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    GoPro</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    DJI</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Canon</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Nikon</label
+                  >
+                </div>
+              </div>
+
+              <!-- TV Size -->
+              <div>
+                <h4 class="font-bold text-sm mb-3">📏 Screen Size</h4>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                    >32"</span
+                  >
+                  <span
+                    class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                    >43"</span
+                  >
+                  <span
+                    class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                    >50"</span
+                  >
+                  <span
+                    class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                    >55"</span
+                  >
+                  <span
+                    class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                    >65"</span
+                  >
+                  <span
+                    class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                    >75"+</span
+                  >
+                </div>
+              </div>
+
+              <!-- Resolution -->
+              <div>
+                <h4 class="font-bold text-sm mb-3">🔮 Resolution</h4>
+                <div class="space-y-2">
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    HD Ready</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Full HD</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    4K Ultra HD</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    8K</label
+                  >
+                </div>
+              </div>
+
+              <!-- Audio Features -->
+              <div>
+                <h4 class="font-bold text-sm mb-3">🎧 Audio Features</h4>
+                <div class="space-y-2">
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Wireless</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Noise Cancelling</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Bluetooth</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Waterproof</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Surround Sound</label
+                  >
+                </div>
+              </div>
+
+              <!-- Camera Features -->
+              <div>
+                <h4 class="font-bold text-sm mb-3">📸 Camera Type</h4>
+                <div class="space-y-2">
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    DSLR</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Mirrorless</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Point & Shoot</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Action Cam</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    360° Camera</label
+                  >
+                </div>
+              </div>
+
+              <!-- Connectivity -->
+              <div>
+                <h4 class="font-bold text-sm mb-3">📶 Connectivity</h4>
+                <div class="space-y-2">
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Wi-Fi</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Bluetooth</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    HDMI</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    USB-C</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    AirPlay</label
+                  >
+                </div>
+              </div>
+
+              <!-- Ratings -->
+              <div>
+                <h4 class="font-bold text-sm mb-3">⭐ Customer Ratings</h4>
+                <div class="space-y-2">
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    ★★★★ & up (2.1k)</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    ★★★ & up (3.8k)</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    ★★ & up (5.2k)</label
+                  >
+                </div>
+              </div>
+
+              <!-- Discount -->
+              <div>
+                <h4 class="font-bold text-sm mb-3">🏷️ Discount</h4>
+                <div class="space-y-2">
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    10% or more</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    20% or more</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    30% or more</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    40% or more</label
+                  >
+                </div>
+              </div>
+
+              <!-- Availability -->
+              <div>
+                <h4 class="font-bold text-sm mb-3">📦 Availability</h4>
+                <label class="flex items-center gap-2 text-sm"
+                  ><input
+                    type="checkbox"
+                    class="rounded border-slate-300 text-primary focus:ring-primary"
+                  />
+                  In Stock</label
+                >
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Product Listing Area (Main Content) -->
+        <div class="lg:col-span-9">
+          <!-- Toolbar -->
+          <div
+            class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 p-4 mb-6 flex flex-wrap items-center justify-between gap-4"
+          >
+            <div class="flex items-center gap-2">
+              <span class="text-sm font-medium">2,156 Products</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="flex items-center gap-2 text-sm">
+                <label for="sort" class="text-slate-500 hidden sm:block"
+                  >Sort by:</label
+                >
+                <select
+                  id="sort"
+                  class="bg-slate-100 dark:bg-slate-800 border-none rounded-lg text-sm p-2 focus:ring-primary"
+                >
+                  <option>Featured</option>
+                  <option>Price: Low to High</option>
+                  <option>Price: High to Low</option>
+                  <option>Newest Arrivals</option>
+                  <option>Top Rated</option>
+                </select>
+              </div>
+              <div class="flex gap-1 border-l pl-4 border-slate-200">
+                <button class="p-2 bg-primary/10 rounded-lg text-primary">
+                  <span class="text-lg">⊞</span>
+                </button>
+                <button class="p-2 hover:bg-slate-100 rounded-lg">
+                  <span class="text-lg">☷</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Grid - Electronics -->
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <!-- Product Card 1 - Sony 65" 4K TV -->
+            <div
+              class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100 dark:border-slate-800"
+            >
+              <div class="relative aspect-square overflow-hidden bg-slate-100">
+                <img
+                  class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  src="https://sony.scene7.com/is/image/sonyglobalsolutions/2022-K-65X80K-Image-2?$categorypdpnav$&fmt=png-alpha"
+                  alt="Sony 65 inch TV"
+                />
+                <span
+                  class="absolute top-2 left-2 bg-primary text-white text-xs font-black px-2 py-1 rounded"
+                  >-25%</span
+                >
+                <button
+                  class="absolute top-2 right-2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-slate-400 hover:text-red-500 transition-colors"
+                >
+                  <span class="text-lg">❤️</span>
+                </button>
+              </div>
+              <div class="p-3">
+                <p class="text-xs text-slate-400 mb-1">Sony • Television</p>
+                <h4
+                  class="font-bold text-sm mb-1 line-clamp-2 group-hover:text-primary transition-colors"
+                >
+                  Sony Bravia 65" 4K Ultra HD Google TV
+                </h4>
+                <div class="flex items-center gap-1 mb-2">
+                  <span class="text-yellow-500 text-sm">★★★★★</span>
+                  <span class="text-[10px] text-slate-400">(1.2k)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-lg font-black text-primary">$899</span>
+                  <span class="text-xs text-slate-400 line-through"
+                    >$1,199</span
+                  >
+                </div>
+                <button
+                  class="w-full mt-3 bg-primary text-white py-2 rounded-lg font-bold text-xs uppercase opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Product Card 2 - Sony WH-1000XM5 Headphones -->
+            <div
+              class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100 dark:border-slate-800"
+            >
+              <div class="relative aspect-square overflow-hidden bg-slate-100">
+                <img
+                  class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  src="https://sony.scene7.com/is/image/sonyglobalsolutions/wh-1000xm5_Primary_image?$categorypdpnav$&fmt=png-alpha"
+                  alt="Sony WH-1000XM5"
+                />
+                <span
+                  class="absolute top-2 left-2 bg-primary text-white text-xs font-black px-2 py-1 rounded"
+                  >-18%</span
+                >
+                <button
+                  class="absolute top-2 right-2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-slate-400 hover:text-red-500 transition-colors"
+                >
+                  <span class="text-lg">❤️</span>
+                </button>
+              </div>
+              <div class="p-3">
+                <p class="text-xs text-slate-400 mb-1">Sony • Headphones</p>
+                <h4
+                  class="font-bold text-sm mb-1 line-clamp-2 group-hover:text-primary transition-colors"
+                >
+                  WH-1000XM5 Wireless Noise Cancelling
+                </h4>
+                <div class="flex items-center gap-1 mb-2">
+                  <span class="text-yellow-500 text-sm">★★★★★</span>
+                  <span class="text-[10px] text-slate-400">(3.4k)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-lg font-black text-primary">$329</span>
+                  <span class="text-xs text-slate-400 line-through">$399</span>
+                </div>
+                <button
+                  class="w-full mt-3 bg-primary text-white py-2 rounded-lg font-bold text-xs uppercase opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Product Card 3 - Canon EOS R6 Mark II -->
+            <div
+              class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100 dark:border-slate-800"
+            >
+              <div class="relative aspect-square overflow-hidden bg-slate-100">
+                <img
+                  class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  src="https://cdn.canon-europe.com/dam/products/mirrorless/eos-r6-mark-ii/images/eos-r6-mark-ii-rf24-105mm-f4l-is-usm-hero-600x600.png"
+                  alt="Canon EOS R6 Mark II"
+                />
+                <span
+                  class="absolute top-2 left-2 bg-primary text-white text-xs font-black px-2 py-1 rounded"
+                  >New</span
+                >
+                <button
+                  class="absolute top-2 right-2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-slate-400 hover:text-red-500 transition-colors"
+                >
+                  <span class="text-lg">❤️</span>
+                </button>
+              </div>
+              <div class="p-3">
+                <p class="text-xs text-slate-400 mb-1">
+                  Canon • Mirrorless Camera
+                </p>
+                <h4
+                  class="font-bold text-sm mb-1 line-clamp-2 group-hover:text-primary transition-colors"
+                >
+                  EOS R6 Mark II Mirrorless Camera Body
+                </h4>
+                <div class="flex items-center gap-1 mb-2">
+                  <span class="text-yellow-500 text-sm">★★★★★</span>
+                  <span class="text-[10px] text-slate-400">(234)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-lg font-black text-primary">$2,199</span>
+                </div>
+                <button
+                  class="w-full mt-3 bg-primary text-white py-2 rounded-lg font-bold text-xs uppercase opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Product Card 4 - Sonos Arc Soundbar -->
+            <div
+              class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100 dark:border-slate-800"
+            >
+              <div class="relative aspect-square overflow-hidden bg-slate-100">
+                <img
+                  class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  src="https://www.sonos.com/en-us/images/product-tiles/arc/arc-black-vertical.png"
+                  alt="Sonos Arc"
+                />
+                <span
+                  class="absolute top-2 left-2 bg-primary text-white text-xs font-black px-2 py-1 rounded"
+                  >-12%</span
+                >
+                <button
+                  class="absolute top-2 right-2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-slate-400 hover:text-red-500 transition-colors"
+                >
+                  <span class="text-lg">❤️</span>
+                </button>
+              </div>
+              <div class="p-3">
+                <p class="text-xs text-slate-400 mb-1">Sonos • Soundbar</p>
+                <h4
+                  class="font-bold text-sm mb-1 line-clamp-2 group-hover:text-primary transition-colors"
+                >
+                  Arc Dolby Atmos Smart Soundbar
+                </h4>
+                <div class="flex items-center gap-1 mb-2">
+                  <span class="text-yellow-500 text-sm">★★★★★</span>
+                  <span class="text-[10px] text-slate-400">(876)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-lg font-black text-primary">$799</span>
+                  <span class="text-xs text-slate-400 line-through">$899</span>
+                </div>
+                <button
+                  class="w-full mt-3 bg-primary text-white py-2 rounded-lg font-bold text-xs uppercase opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Product Card 5 - DJI Mini 4 Pro Drone -->
+            <div
+              class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100 dark:border-slate-800"
+            >
+              <div class="relative aspect-square overflow-hidden bg-slate-100">
+                <img
+                  class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  src="https://www.dji.com/assets/upload/mini-4-pro/image/feature/feature-1-desktop-3d9c80.png"
+                  alt="DJI Mini 4 Pro"
+                />
+                <span
+                  class="absolute top-2 left-2 bg-primary text-white text-xs font-black px-2 py-1 rounded"
+                  >-10%</span
+                >
+                <button
+                  class="absolute top-2 right-2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-slate-400 hover:text-red-500 transition-colors"
+                >
+                  <span class="text-lg">❤️</span>
+                </button>
+              </div>
+              <div class="p-3">
+                <p class="text-xs text-slate-400 mb-1">DJI • Drone</p>
+                <h4
+                  class="font-bold text-sm mb-1 line-clamp-2 group-hover:text-primary transition-colors"
+                >
+                  Mini 4 Pro Fly More Combo Plus
+                </h4>
+                <div class="flex items-center gap-1 mb-2">
+                  <span class="text-yellow-500 text-sm">★★★★★</span>
+                  <span class="text-[10px] text-slate-400">(432)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-lg font-black text-primary">$999</span>
+                  <span class="text-xs text-slate-400 line-through"
+                    >$1,099</span
+                  >
+                </div>
+                <button
+                  class="w-full mt-3 bg-primary text-white py-2 rounded-lg font-bold text-xs uppercase opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Product Card 6 - Bose QuietComfort Ultra -->
+            <div
+              class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100 dark:border-slate-800"
+            >
+              <div class="relative aspect-square overflow-hidden bg-slate-100">
+                <img
+                  class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  src="https://assets.bose.com/content/dam/ Bose/products/headphones/quietcomfort-ultra-headphones/black/pdp/QCU-headphones-black-ecatalog-hero.png"
+                  alt="Bose QuietComfort Ultra"
+                />
+                <span
+                  class="absolute top-2 left-2 bg-primary text-white text-xs font-black px-2 py-1 rounded"
+                  >-15%</span
+                >
+                <button
+                  class="absolute top-2 right-2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-slate-400 hover:text-red-500 transition-colors"
+                >
+                  <span class="text-lg">❤️</span>
+                </button>
+              </div>
+              <div class="p-3">
+                <p class="text-xs text-slate-400 mb-1">Bose • Headphones</p>
+                <h4
+                  class="font-bold text-sm mb-1 line-clamp-2 group-hover:text-primary transition-colors"
+                >
+                  QuietComfort Ultra Wireless NC
+                </h4>
+                <div class="flex items-center gap-1 mb-2">
+                  <span class="text-yellow-500 text-sm">★★★★★</span>
+                  <span class="text-[10px] text-slate-400">(1.5k)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-lg font-black text-primary">$379</span>
+                  <span class="text-xs text-slate-400 line-through">$429</span>
+                </div>
+                <button
+                  class="w-full mt-3 bg-primary text-white py-2 rounded-lg font-bold text-xs uppercase opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Product Card 7 - Apple Watch Ultra 2 -->
+            <div
+              class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100 dark:border-slate-800"
+            >
+              <div class="relative aspect-square overflow-hidden bg-slate-100">
+                <img
+                  class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MU693_VW_34FR+watch-case-46-ultra2-natural-titanium-cell-s10_VW_34FR+watch-face-46-ultra2-cell-s10_VW_34FR?wid=512&hei=512&fmt=p-jpg&qlt=95&.v=ZkpvU2V4RkFTek16VXpZRUZKWnhEbm84TVRVMU1qSTFOUT09"
+                  alt="Apple Watch Ultra 2"
+                />
+                <span
+                  class="absolute top-2 left-2 bg-primary text-white text-xs font-black px-2 py-1 rounded"
+                  >New</span
+                >
+                <button
+                  class="absolute top-2 right-2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-slate-400 hover:text-red-500 transition-colors"
+                >
+                  <span class="text-lg">❤️</span>
+                </button>
+              </div>
+              <div class="p-3">
+                <p class="text-xs text-slate-400 mb-1">Apple • Smartwatch</p>
+                <h4
+                  class="font-bold text-sm mb-1 line-clamp-2 group-hover:text-primary transition-colors"
+                >
+                  Watch Ultra 2 GPS + Cellular (49mm)
+                </h4>
+                <div class="flex items-center gap-1 mb-2">
+                  <span class="text-yellow-500 text-sm">★★★★★</span>
+                  <span class="text-[10px] text-slate-400">(987)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-lg font-black text-primary">$799</span>
+                </div>
+                <button
+                  class="w-full mt-3 bg-primary text-white py-2 rounded-lg font-bold text-xs uppercase opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Product Card 8 - GoPro HERO12 Black -->
+            <div
+              class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100 dark:border-slate-800"
+            >
+              <div class="relative aspect-square overflow-hidden bg-slate-100">
+                <img
+                  class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  src="https://gopro.com/content/dam/help/products/hero12-black/hero12-black-create-hero-product-grid.png"
+                  alt="GoPro HERO12"
+                />
+                <span
+                  class="absolute top-2 left-2 bg-primary text-white text-xs font-black px-2 py-1 rounded"
+                  >-20%</span
+                >
+                <button
+                  class="absolute top-2 right-2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-slate-400 hover:text-red-500 transition-colors"
+                >
+                  <span class="text-lg">❤️</span>
+                </button>
+              </div>
+              <div class="p-3">
+                <p class="text-xs text-slate-400 mb-1">GoPro • Action Camera</p>
+                <h4
+                  class="font-bold text-sm mb-1 line-clamp-2 group-hover:text-primary transition-colors"
+                >
+                  HERO12 Black Creator Edition
+                </h4>
+                <div class="flex items-center gap-1 mb-2">
+                  <span class="text-yellow-500 text-sm">★★★★★</span>
+                  <span class="text-[10px] text-slate-400">(654)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-lg font-black text-primary">$349</span>
+                  <span class="text-xs text-slate-400 line-through">$399</span>
+                </div>
+                <button
+                  class="w-full mt-3 bg-primary text-white py-2 rounded-lg font-bold text-xs uppercase opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Featured Promo Strip - Electronics Deals -->
+          <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div
+              class="bg-gradient-to-r from-blue-800 to-indigo-900 rounded-xl p-6 text-white"
+            >
+              <h4 class="text-lg font-black mb-2">📺 Bundle & Save</h4>
+              <p class="text-sm opacity-90 mb-4">
+                Buy any TV + Soundbar and get 20% off the soundbar
+              </p>
+              <button
+                class="bg-white text-blue-800 px-6 py-2 rounded-lg font-bold text-sm hover:scale-105 transition-transform"
+              >
+                Shop Bundles
+              </button>
+            </div>
+            <div
+              class="bg-gradient-to-r from-purple-700 to-pink-700 rounded-xl p-6 text-white"
+            >
+              <h4 class="text-lg font-black mb-2">📸 Trade-In Camera</h4>
+              <p class="text-sm opacity-90 mb-4">
+                Get up to $500 credit when you trade in your old camera
+              </p>
+              <button
+                class="bg-white text-purple-700 px-6 py-2 rounded-lg font-bold text-sm hover:scale-105 transition-transform"
+              >
+                Trade In
+              </button>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <div class="mt-8 flex justify-center items-center gap-2">
+            <button
+              class="w-10 h-10 rounded-lg border border-slate-200 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+            >
+              «
+            </button>
+            <button
+              class="w-10 h-10 rounded-lg bg-primary text-white flex items-center justify-center font-bold"
+            >
+              1
+            </button>
+            <button
+              class="w-10 h-10 rounded-lg border border-slate-200 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+            >
+              2
+            </button>
+            <button
+              class="w-10 h-10 rounded-lg border border-slate-200 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+            >
+              3
+            </button>
+            <button
+              class="w-10 h-10 rounded-lg border border-slate-200 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+            >
+              4
+            </button>
+            <span class="px-2">...</span>
+            <button
+              class="w-10 h-10 rounded-lg border border-slate-200 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+            >
+              25
+            </button>
+            <button
+              class="w-10 h-10 rounded-lg border border-slate-200 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+            >
+              »
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Newsletter Section -->
+      <section
+        class="mt-20 bg-primary/10 rounded-2xl p-8 lg:p-12 border border-primary/20"
+      >
+        <div
+          class="flex flex-col lg:flex-row items-center justify-between gap-8"
+        >
+          <div class="text-center lg:text-left">
+            <h3 class="text-3xl font-black text-slate-900 dark:text-white mb-2">
+              Join the ShopSphere Club
+            </h3>
+            <p class="text-slate-600 dark:text-slate-400 max-w-md">
+              Subscribe to get notifications on our best deals, new arrivals,
+              and exclusive vouchers.
+            </p>
+          </div>
+          <div class="flex flex-col sm:flex-row w-full max-w-lg gap-3">
+            <input
+              class="flex-1 px-6 py-4 rounded-xl bg-white dark:bg-slate-800 border-none focus:ring-2 focus:ring-primary shadow-sm"
+              placeholder="Enter your email address"
+              type="email"
+            />
+            <button
+              class="bg-primary text-white font-bold px-10 py-4 rounded-xl shadow-lg hover:scale-105 transition-transform uppercase tracking-wider"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-20 bg-slate-900 text-slate-300 py-16 px-4 lg:px-20">
+      <div
+        class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12"
+      >
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-2 mb-6 text-white">
+            <div class="bg-primary p-1 rounded">
+              <span class="text-2xl">🛒</span>
+            </div>
+            <h2 class="text-2xl font-black tracking-tighter uppercase">
+              ShopSphere
+            </h2>
+          </div>
+          <p class="mb-8 leading-relaxed max-w-sm">
+            ShopSphere is the world's most customer-centric online shopping
+            platform. We provide millions of items from electronics to home
+            essentials at the best prices with the fastest delivery.
+          </p>
+          <div class="flex gap-4">
+            <a
+              class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+              href="#"
+              ><span class="text-lg">🌐</span></a
+            >
+            <a
+              class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+              href="#"
+              ><span class="text-lg">📱</span></a
+            >
+            <a
+              class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+              href="#"
+              ><span class="text-lg">📷</span></a
+            >
+          </div>
+        </div>
+        <div>
+          <h4
+            class="text-white font-bold mb-6 uppercase tracking-widest text-xs"
+          >
+            Shop with us
+          </h4>
+          <ul class="flex flex-col gap-4 text-sm">
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Our Story</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Categories</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Special Offers</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >New Arrivals</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Gift Cards</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4
+            class="text-white font-bold mb-6 uppercase tracking-widest text-xs"
+          >
+            Customer Service
+          </h4>
+          <ul class="flex flex-col gap-4 text-sm">
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Help Center</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Track Your Order</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Shipping & Delivery</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Returns & Refunds</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Terms & Conditions</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4
+            class="text-white font-bold mb-6 uppercase tracking-widest text-xs"
+          >
+            Stay Updated
+          </h4>
+          <div class="flex flex-col gap-4">
+            <p class="text-sm text-gray-400 mb-2">
+              Get the latest news and updates delivered to your inbox
+            </p>
+            <form class="flex flex-col gap-3">
+              <input
+                type="email"
+                placeholder="Your email address"
+                class="bg-slate-800 border border-slate-700 rounded-xl p-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-primary transition-colors"
+              />
+              <button
+                class="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-4 rounded-xl transition-colors"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div
+        class="max-w-[1440px] mx-auto mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs opacity-60"
+      >
+        <p>© 2019 ShopSphere E-Commerce Ltd. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a class="hover:underline" href="#">Privacy Policy</a>
+          <a class="hover:underline" href="#">Cookie Policy</a>
+          <a class="hover:underline" href="#">Accessibility</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

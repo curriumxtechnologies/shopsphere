@@ -1,0 +1,1711 @@
+<!doctype html>
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#ff9900",
+              "background-light": "#f8f7f5",
+              "background-dark": "#231b0f",
+            },
+            fontFamily: {
+              display: ["Inter"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .icon-sm {
+        width: 1rem;
+        height: 1rem;
+      }
+      .icon-md {
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+      .icon-lg {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+      .icon-xl {
+        width: 2rem;
+        height: 2rem;
+      }
+    </style>
+    <title>ShopSphere | Home & Office</title>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100"
+  >
+    <!-- Announcement Bar -->
+    <div
+      class="bg-slate-900 text-white text-xs py-2 px-4 flex justify-between items-center"
+    >
+      <div class="flex gap-4">
+        <span class="flex items-center gap-1">
+          <span class="text-base">🚚</span>
+          Free delivery on orders over $50
+        </span>
+        <span class="hidden md:flex items-center gap-1 text-primary">
+          <span class="text-base">🏷️</span>
+          20% Off your first order
+        </span>
+      </div>
+      <div class="flex gap-4">
+        <a class="hover:underline" href="#">Help Center</a>
+      </div>
+    </div>
+
+    <!-- Main Header -->
+    <header
+      class="sticky top-0 z-50 bg-white dark:bg-slate-950 shadow-sm border-b border-slate-200 dark:border-slate-800 px-4 lg:px-20 py-4"
+    >
+      <div class="max-w-[1440px] mx-auto flex items-center gap-8">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <div class="bg-primary text-white p-1 rounded-lg">
+            <span class="text-3xl">🛒</span>
+          </div>
+          <h1
+            class="text-2xl font-black tracking-tighter text-slate-900 dark:text-white uppercase"
+          >
+            ShopSphere
+          </h1>
+        </div>
+        <!-- Search Bar -->
+        <div class="flex-1 max-w-2xl hidden md:block">
+          <div class="relative flex items-center">
+            <span class="absolute left-3 text-slate-400 text-lg">🔍</span>
+            <input
+              class="w-full pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-lg focus:ring-2 focus:ring-primary text-sm"
+              placeholder="Search for furniture, decor, office supplies..."
+              type="text"
+            />
+            <button
+              class="ml-2 bg-primary text-white px-6 py-2 rounded-lg font-bold hover:bg-opacity-90 transition-colors uppercase text-sm shadow-sm"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+        <!-- User Actions -->
+        <div class="flex items-center gap-6">
+          <button
+            class="flex items-center gap-2 hover:text-primary transition-colors"
+          >
+            <span class="text-xl">👤</span>
+            <div class="hidden lg:block text-left leading-tight">
+              <p class="text-[10px] text-slate-500">Welcome,</p>
+              <p class="text-xs font-bold">Account</p>
+            </div>
+          </button>
+          <button
+            class="relative flex items-center gap-2 hover:text-primary transition-colors"
+          >
+            <span class="text-xl">❤️</span>
+            <span
+              class="absolute -top-1 -right-1 bg-primary text-white text-[10px] rounded-full w-4 h-4 flex items-center justify-center font-bold border-2 border-white"
+              >0</span
+            >
+            <p class="hidden lg:block text-xs font-bold">Wishlist</p>
+          </button>
+          <button
+            class="relative flex items-center gap-2 hover:text-primary transition-colors"
+          >
+            <span class="text-xl">🛍️</span>
+            <span
+              class="absolute -top-1 -right-1 bg-primary text-white text-[10px] rounded-full w-4 h-4 flex items-center justify-center font-bold border-2 border-white"
+              >2</span
+            >
+            <p class="hidden lg:block text-xs font-bold">Cart</p>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div
+      class="max-w-[1440px] mx-auto px-4 lg:px-10 pt-4 text-xs text-slate-500"
+    >
+      <a href="/frontend/index.html" class="hover:text-primary">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-slate-900 dark:text-slate-300 font-medium"
+        >Home & Office</span
+      >
+    </div>
+
+    <main class="max-w-[1440px] mx-auto px-4 lg:px-10 py-6">
+      <!-- Category Hero Banner - Home & Office Specific -->
+      <div
+        class="relative rounded-xl overflow-hidden h-[320px] sm:h-[360px] lg:h-[400px] shadow-lg group mb-8"
+      >
+        <div
+          class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+          style="
+            background-image:
+              linear-gradient(
+                to right,
+                rgba(40, 60, 40, 0.8) 0%,
+                rgba(80, 100, 70, 0.6) 50%,
+                rgba(120, 140, 110, 0.4) 100%
+              ),
+              url(&quot;https://images.unsplash.com/photo-1583847268964-b28dc8aa7c1c?q=80&w=1974&auto=format&fit=crop&quot;);
+          "
+        ></div>
+        <div
+          class="absolute inset-0 flex flex-col justify-center px-8 md:px-16 text-white"
+        >
+          <span
+            class="bg-primary text-black font-black uppercase text-xs px-3 py-1 rounded-full w-fit mb-4"
+            >Work From Home Sale</span
+          >
+          <h2
+            class="text-4xl md:text-5xl lg:text-6xl font-black mb-4 max-w-2xl leading-tight"
+          >
+            Create Your Perfect Space
+          </h2>
+          <p class="text-lg md:text-xl mb-6 max-w-xl opacity-90">
+            Furniture, decor & office essentials. Up to
+            <span class="text-primary font-bold">50% off</span> on select items.
+          </p>
+          <div class="flex gap-4">
+            <button
+              class="bg-primary text-white px-8 py-3 rounded-lg font-bold hover:scale-105 transition-transform"
+            >
+              Shop Furniture
+            </button>
+            <button
+              class="bg-white/20 backdrop-blur-md text-white px-8 py-3 rounded-lg font-bold border border-white/30 hover:bg-white/30 transition-all"
+            >
+              Office Supplies
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content Area with Sidebar -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <!-- Sidebar Filters - Mobile Collapsible, Desktop Always Visible -->
+        <aside class="lg:col-span-3">
+          <!-- Mobile Filter Toggle -->
+          <details
+            class="lg:hidden w-full mb-4 bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800"
+          >
+            <summary
+              class="flex items-center justify-between px-4 py-4 bg-slate-50 dark:bg-slate-800 text-sm font-bold cursor-pointer list-none rounded-xl"
+            >
+              <span class="flex items-center gap-2">
+                <span class="text-lg">🔍</span>
+                <span>FILTERS & CATEGORIES</span>
+              </span>
+              <span class="text-lg transition-transform group-open:rotate-180"
+                >▼</span
+              >
+            </summary>
+            <div class="p-4 border-t border-slate-200 dark:border-slate-700">
+              <!-- Mobile Filter Content -->
+              <div class="space-y-6">
+                <!-- Categories -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3 flex items-center gap-2">
+                    <span class="text-primary">🏠</span> Categories
+                  </h4>
+                  <ul class="space-y-2 text-sm">
+                    <li>
+                      <a href="#" class="text-primary font-medium"
+                        >All Home & Office</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary">Furniture</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary">Office Chairs</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary">Desks & Tables</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary"
+                        >Storage & Shelving</a
+                      >
+                    </li>
+                    <li><a href="#" class="hover:text-primary">Lighting</a></li>
+                    <li>
+                      <a href="#" class="hover:text-primary">Home Decor</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary"
+                        >Kitchen & Dining</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary">Bedding & Bath</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary">Office Supplies</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary">Stationery</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Price Range -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3">💰 Price Range</h4>
+                  <div class="space-y-2">
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Under $25</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      $25 - $50</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      $50 - $100</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      $100 - $250</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      $250 - $500</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      $500 - $1,000</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Over $1,000</label
+                    >
+                  </div>
+                </div>
+
+                <!-- Brands -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3">🏷️ Brands</h4>
+                  <div class="space-y-2">
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      IKEA</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Herman Miller</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Steelcase</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Ashley Furniture</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      West Elm</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Pottery Barn</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Staples</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Muji</label
+                    >
+                  </div>
+                </div>
+
+                <!-- Material -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3">🪵 Material</h4>
+                  <div class="space-y-2">
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Wood</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Metal</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Glass</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Fabric</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Leather</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Plastic</label
+                    >
+                  </div>
+                </div>
+
+                <!-- Room -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3">🚪 Room</h4>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                      >Living Room</span
+                    >
+                    <span
+                      class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                      >Bedroom</span
+                    >
+                    <span
+                      class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                      >Home Office</span
+                    >
+                    <span
+                      class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                      >Kitchen</span
+                    >
+                    <span
+                      class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                      >Dining Room</span
+                    >
+                    <span
+                      class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                      >Bathroom</span
+                    >
+                    <span
+                      class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                      >Outdoor</span
+                    >
+                  </div>
+                </div>
+
+                <!-- Color -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3">🎨 Color</h4>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="w-6 h-6 rounded-full bg-black border-2 border-transparent cursor-pointer hover:scale-110"
+                    ></span>
+                    <span
+                      class="w-6 h-6 rounded-full bg-white border border-slate-300 cursor-pointer hover:scale-110"
+                    ></span>
+                    <span
+                      class="w-6 h-6 rounded-full bg-gray-400 cursor-pointer hover:scale-110"
+                    ></span>
+                    <span
+                      class="w-6 h-6 rounded-full bg-brown-600 bg-amber-800 cursor-pointer hover:scale-110"
+                    ></span>
+                    <span
+                      class="w-6 h-6 rounded-full bg-blue-500 cursor-pointer hover:scale-110"
+                    ></span>
+                    <span
+                      class="w-6 h-6 rounded-full bg-green-500 cursor-pointer hover:scale-110"
+                    ></span>
+                    <span
+                      class="w-6 h-6 rounded-full bg-red-500 cursor-pointer hover:scale-110"
+                    ></span>
+                    <span
+                      class="w-6 h-6 rounded-full bg-yellow-500 cursor-pointer hover:scale-110"
+                    ></span>
+                  </div>
+                </div>
+
+                <!-- Features -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3">✨ Features</h4>
+                  <div class="space-y-2">
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Ergonomic</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Adjustable Height</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      With Drawers</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Space Saving</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Foldable</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Water Resistant</label
+                    >
+                  </div>
+                </div>
+
+                <!-- Ratings -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3">⭐ Customer Ratings</h4>
+                  <div class="space-y-2">
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      ★★★★ & up (1.8k)</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      ★★★ & up (3.2k)</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      ★★ & up (4.7k)</label
+                    >
+                  </div>
+                </div>
+
+                <!-- Discount -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3">🏷️ Discount</h4>
+                  <div class="space-y-2">
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      10% or more</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      20% or more</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      30% or more</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      40% or more</label
+                    >
+                  </div>
+                </div>
+
+                <!-- Availability -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3">📦 Availability</h4>
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    In Stock</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Ready to Assemble</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Free Assembly</label
+                  >
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <!-- Desktop Filters -->
+          <div
+            class="hidden lg:block bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 p-5 sticky top-24"
+          >
+            <h3 class="font-bold text-lg mb-5 flex items-center gap-2">
+              <span class="text-primary text-xl">🔍</span> Filters
+            </h3>
+            <div class="space-y-6 max-h-[600px] overflow-y-auto pr-2">
+              <!-- Categories -->
+              <div>
+                <h4 class="font-bold text-sm mb-3 flex items-center gap-2">
+                  <span class="text-primary">🏠</span> Categories
+                </h4>
+                <ul class="space-y-2 text-sm">
+                  <li>
+                    <a href="#" class="text-primary font-medium"
+                      >All Home & Office</a
+                    >
+                  </li>
+                  <li><a href="#" class="hover:text-primary">Furniture</a></li>
+                  <li>
+                    <a href="#" class="hover:text-primary">Office Chairs</a>
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-primary">Desks & Tables</a>
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-primary"
+                      >Storage & Shelving</a
+                    >
+                  </li>
+                  <li><a href="#" class="hover:text-primary">Lighting</a></li>
+                  <li><a href="#" class="hover:text-primary">Home Decor</a></li>
+                  <li>
+                    <a href="#" class="hover:text-primary">Kitchen & Dining</a>
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-primary">Bedding & Bath</a>
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-primary">Office Supplies</a>
+                  </li>
+                  <li><a href="#" class="hover:text-primary">Stationery</a></li>
+                </ul>
+              </div>
+
+              <!-- Price Range -->
+              <div>
+                <h4 class="font-bold text-sm mb-3">💰 Price Range</h4>
+                <div class="space-y-2">
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Under $25</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    $25 - $50</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    $50 - $100</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    $100 - $250</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    $250 - $500</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    $500 - $1,000</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Over $1,000</label
+                  >
+                </div>
+              </div>
+
+              <!-- Brands -->
+              <div>
+                <h4 class="font-bold text-sm mb-3">🏷️ Brands</h4>
+                <div class="space-y-2">
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    IKEA</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Herman Miller</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Steelcase</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Ashley Furniture</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    West Elm</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Pottery Barn</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Staples</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Muji</label
+                  >
+                </div>
+              </div>
+
+              <!-- Material -->
+              <div>
+                <h4 class="font-bold text-sm mb-3">🪵 Material</h4>
+                <div class="space-y-2">
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Wood</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Metal</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Glass</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Fabric</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Leather</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Plastic</label
+                  >
+                </div>
+              </div>
+
+              <!-- Room -->
+              <div>
+                <h4 class="font-bold text-sm mb-3">🚪 Room</h4>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                    >Living Room</span
+                  >
+                  <span
+                    class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                    >Bedroom</span
+                  >
+                  <span
+                    class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                    >Home Office</span
+                  >
+                  <span
+                    class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                    >Kitchen</span
+                  >
+                  <span
+                    class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                    >Dining Room</span
+                  >
+                  <span
+                    class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                    >Bathroom</span
+                  >
+                  <span
+                    class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                    >Outdoor</span
+                  >
+                </div>
+              </div>
+
+              <!-- Color -->
+              <div>
+                <h4 class="font-bold text-sm mb-3">🎨 Color</h4>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="w-6 h-6 rounded-full bg-black border-2 border-transparent cursor-pointer hover:scale-110"
+                  ></span>
+                  <span
+                    class="w-6 h-6 rounded-full bg-white border border-slate-300 cursor-pointer hover:scale-110"
+                  ></span>
+                  <span
+                    class="w-6 h-6 rounded-full bg-gray-400 cursor-pointer hover:scale-110"
+                  ></span>
+                  <span
+                    class="w-6 h-6 rounded-full bg-amber-800 cursor-pointer hover:scale-110"
+                  ></span>
+                  <span
+                    class="w-6 h-6 rounded-full bg-blue-500 cursor-pointer hover:scale-110"
+                  ></span>
+                  <span
+                    class="w-6 h-6 rounded-full bg-green-500 cursor-pointer hover:scale-110"
+                  ></span>
+                  <span
+                    class="w-6 h-6 rounded-full bg-red-500 cursor-pointer hover:scale-110"
+                  ></span>
+                  <span
+                    class="w-6 h-6 rounded-full bg-yellow-500 cursor-pointer hover:scale-110"
+                  ></span>
+                </div>
+              </div>
+
+              <!-- Features -->
+              <div>
+                <h4 class="font-bold text-sm mb-3">✨ Features</h4>
+                <div class="space-y-2">
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Ergonomic</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Adjustable Height</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    With Drawers</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Space Saving</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Foldable</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Water Resistant</label
+                  >
+                </div>
+              </div>
+
+              <!-- Ratings -->
+              <div>
+                <h4 class="font-bold text-sm mb-3">⭐ Customer Ratings</h4>
+                <div class="space-y-2">
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    ★★★★ & up (1.8k)</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    ★★★ & up (3.2k)</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    ★★ & up (4.7k)</label
+                  >
+                </div>
+              </div>
+
+              <!-- Discount -->
+              <div>
+                <h4 class="font-bold text-sm mb-3">🏷️ Discount</h4>
+                <div class="space-y-2">
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    10% or more</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    20% or more</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    30% or more</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    40% or more</label
+                  >
+                </div>
+              </div>
+
+              <!-- Availability -->
+              <div>
+                <h4 class="font-bold text-sm mb-3">📦 Availability</h4>
+                <label class="flex items-center gap-2 text-sm"
+                  ><input
+                    type="checkbox"
+                    class="rounded border-slate-300 text-primary focus:ring-primary"
+                  />
+                  In Stock</label
+                >
+                <label class="flex items-center gap-2 text-sm"
+                  ><input
+                    type="checkbox"
+                    class="rounded border-slate-300 text-primary focus:ring-primary"
+                  />
+                  Ready to Assemble</label
+                >
+                <label class="flex items-center gap-2 text-sm"
+                  ><input
+                    type="checkbox"
+                    class="rounded border-slate-300 text-primary focus:ring-primary"
+                  />
+                  Free Assembly</label
+                >
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Product Listing Area (Main Content) -->
+        <div class="lg:col-span-9">
+          <!-- Toolbar -->
+          <div
+            class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 p-4 mb-6 flex flex-wrap items-center justify-between gap-4"
+          >
+            <div class="flex items-center gap-2">
+              <span class="text-sm font-medium">1,892 Products</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="flex items-center gap-2 text-sm">
+                <label for="sort" class="text-slate-500 hidden sm:block"
+                  >Sort by:</label
+                >
+                <select
+                  id="sort"
+                  class="bg-slate-100 dark:bg-slate-800 border-none rounded-lg text-sm p-2 focus:ring-primary"
+                >
+                  <option>Featured</option>
+                  <option>Price: Low to High</option>
+                  <option>Price: High to Low</option>
+                  <option>Newest Arrivals</option>
+                  <option>Top Rated</option>
+                </select>
+              </div>
+              <div class="flex gap-1 border-l pl-4 border-slate-200">
+                <button class="p-2 bg-primary/10 rounded-lg text-primary">
+                  <span class="text-lg">⊞</span>
+                </button>
+                <button class="p-2 hover:bg-slate-100 rounded-lg">
+                  <span class="text-lg">☷</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Grid - Home & Office -->
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <!-- Product Card 1 - Herman Miller Aeron Chair -->
+            <div
+              class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100 dark:border-slate-800"
+            >
+              <div class="relative aspect-square overflow-hidden bg-slate-100">
+                <img
+                  class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  src="https://www.hermanmiller.com/content/dam/hermanmiller/images/products/aeron-chair/gallery/2021-08-19_gallery_aeron_chair_01.jpg"
+                  alt="Herman Miller Aeron Chair"
+                />
+                <span
+                  class="absolute top-2 left-2 bg-primary text-white text-xs font-black px-2 py-1 rounded"
+                  >-15%</span
+                >
+                <button
+                  class="absolute top-2 right-2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-slate-400 hover:text-red-500 transition-colors"
+                >
+                  <span class="text-lg">❤️</span>
+                </button>
+              </div>
+              <div class="p-3">
+                <p class="text-xs text-slate-400 mb-1">
+                  Herman Miller • Office Chair
+                </p>
+                <h4
+                  class="font-bold text-sm mb-1 line-clamp-2 group-hover:text-primary transition-colors"
+                >
+                  Aeron Ergonomic Office Chair (Size B)
+                </h4>
+                <div class="flex items-center gap-1 mb-2">
+                  <span class="text-yellow-500 text-sm">★★★★★</span>
+                  <span class="text-[10px] text-slate-400">(2.4k)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-lg font-black text-primary">$1,445</span>
+                  <span class="text-xs text-slate-400 line-through"
+                    >$1,695</span
+                  >
+                </div>
+                <button
+                  class="w-full mt-3 bg-primary text-white py-2 rounded-lg font-bold text-xs uppercase opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Product Card 2 - IKEA BEKANT Standing Desk -->
+            <div
+              class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100 dark:border-slate-800"
+            >
+              <div class="relative aspect-square overflow-hidden bg-slate-100">
+                <img
+                  class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  src="https://www.ikea.com/us/en/images/products/bekant-desk-sit-stand-white__0736710_pe740847_s5.jpg"
+                  alt="IKEA BEKANT Desk"
+                />
+                <span
+                  class="absolute top-2 left-2 bg-primary text-white text-xs font-black px-2 py-1 rounded"
+                  >-20%</span
+                >
+                <button
+                  class="absolute top-2 right-2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-slate-400 hover:text-red-500 transition-colors"
+                >
+                  <span class="text-lg">❤️</span>
+                </button>
+              </div>
+              <div class="p-3">
+                <p class="text-xs text-slate-400 mb-1">IKEA • Standing Desk</p>
+                <h4
+                  class="font-bold text-sm mb-1 line-clamp-2 group-hover:text-primary transition-colors"
+                >
+                  BEKANT Sit/Stand Electric Desk (63")
+                </h4>
+                <div class="flex items-center gap-1 mb-2">
+                  <span class="text-yellow-500 text-sm">★★★★★</span>
+                  <span class="text-[10px] text-slate-400">(876)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-lg font-black text-primary">$479</span>
+                  <span class="text-xs text-slate-400 line-through">$599</span>
+                </div>
+                <button
+                  class="w-full mt-3 bg-primary text-white py-2 rounded-lg font-bold text-xs uppercase opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Product Card 3 - Steelcase Gesture Chair -->
+            <div
+              class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100 dark:border-slate-800"
+            >
+              <div class="relative aspect-square overflow-hidden bg-slate-100">
+                <img
+                  class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  src="https://www.steelcase.com/content/uploads/2020/01/gesture-front-3-4-cognac-leather-1440x1152.jpg"
+                  alt="Steelcase Gesture Chair"
+                />
+                <span
+                  class="absolute top-2 left-2 bg-primary text-white text-xs font-black px-2 py-1 rounded"
+                  >-12%</span
+                >
+                <button
+                  class="absolute top-2 right-2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-slate-400 hover:text-red-500 transition-colors"
+                >
+                  <span class="text-lg">❤️</span>
+                </button>
+              </div>
+              <div class="p-3">
+                <p class="text-xs text-slate-400 mb-1">
+                  Steelcase • Office Chair
+                </p>
+                <h4
+                  class="font-bold text-sm mb-1 line-clamp-2 group-hover:text-primary transition-colors"
+                >
+                  Gesture Ergonomic Chair with Headrest
+                </h4>
+                <div class="flex items-center gap-1 mb-2">
+                  <span class="text-yellow-500 text-sm">★★★★★</span>
+                  <span class="text-[10px] text-slate-400">(654)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-lg font-black text-primary">$1,319</span>
+                  <span class="text-xs text-slate-400 line-through"
+                    >$1,499</span
+                  >
+                </div>
+                <button
+                  class="w-full mt-3 bg-primary text-white py-2 rounded-lg font-bold text-xs uppercase opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Product Card 4 - West Elm Mid-Century Desk -->
+            <div
+              class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100 dark:border-slate-800"
+            >
+              <div class="relative aspect-square overflow-hidden bg-slate-100">
+                <img
+                  class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  src="https://www.westelm.com/weimgs/ab/images/wcm/products/202428/0048/mid-century-desk-60-o.jpg"
+                  alt="West Elm Desk"
+                />
+                <span
+                  class="absolute top-2 left-2 bg-primary text-white text-xs font-black px-2 py-1 rounded"
+                  >-25%</span
+                >
+                <button
+                  class="absolute top-2 right-2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-slate-400 hover:text-red-500 transition-colors"
+                >
+                  <span class="text-lg">❤️</span>
+                </button>
+              </div>
+              <div class="p-3">
+                <p class="text-xs text-slate-400 mb-1">West Elm • Desk</p>
+                <h4
+                  class="font-bold text-sm mb-1 line-clamp-2 group-hover:text-primary transition-colors"
+                >
+                  Mid-Century Writing Desk (60", Walnut)
+                </h4>
+                <div class="flex items-center gap-1 mb-2">
+                  <span class="text-yellow-500 text-sm">★★★★☆</span>
+                  <span class="text-[10px] text-slate-400">(234)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-lg font-black text-primary">$599</span>
+                  <span class="text-xs text-slate-400 line-through">$799</span>
+                </div>
+                <button
+                  class="w-full mt-3 bg-primary text-white py-2 rounded-lg font-bold text-xs uppercase opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Product Card 5 - IKEA KALLAX Shelving Unit -->
+            <div
+              class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100 dark:border-slate-800"
+            >
+              <div class="relative aspect-square overflow-hidden bg-slate-100">
+                <img
+                  class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  src="https://www.ikea.com/us/en/images/products/kallax-shelf-unit-white__0737165_pe740975_s5.jpg"
+                  alt="IKEA KALLAX"
+                />
+                <span
+                  class="absolute top-2 left-2 bg-primary text-white text-xs font-black px-2 py-1 rounded"
+                  >-15%</span
+                >
+                <button
+                  class="absolute top-2 right-2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-slate-400 hover:text-red-500 transition-colors"
+                >
+                  <span class="text-lg">❤️</span>
+                </button>
+              </div>
+              <div class="p-3">
+                <p class="text-xs text-slate-400 mb-1">IKEA • Storage</p>
+                <h4
+                  class="font-bold text-sm mb-1 line-clamp-2 group-hover:text-primary transition-colors"
+                >
+                  KALLAX Shelving Unit (77"x77")
+                </h4>
+                <div class="flex items-center gap-1 mb-2">
+                  <span class="text-yellow-500 text-sm">★★★★★</span>
+                  <span class="text-[10px] text-slate-400">(1.2k)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-lg font-black text-primary">$189</span>
+                  <span class="text-xs text-slate-400 line-through">$219</span>
+                </div>
+                <button
+                  class="w-full mt-3 bg-primary text-white py-2 rounded-lg font-bold text-xs uppercase opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Product Card 6 - Philips Hue Smart Lighting -->
+            <div
+              class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100 dark:border-slate-800"
+            >
+              <div class="relative aspect-square overflow-hidden bg-slate-100">
+                <img
+                  class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  src="https://www.philips-hue.com/content/dam/hue/en_us/images/products/smart-lighting/philips-hue-white-color-ambiance-4-pack.jpg"
+                  alt="Philips Hue"
+                />
+                <span
+                  class="absolute top-2 left-2 bg-primary text-white text-xs font-black px-2 py-1 rounded"
+                  >-22%</span
+                >
+                <button
+                  class="absolute top-2 right-2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-slate-400 hover:text-red-500 transition-colors"
+                >
+                  <span class="text-lg">❤️</span>
+                </button>
+              </div>
+              <div class="p-3">
+                <p class="text-xs text-slate-400 mb-1">
+                  Philips Hue • Lighting
+                </p>
+                <h4
+                  class="font-bold text-sm mb-1 line-clamp-2 group-hover:text-primary transition-colors"
+                >
+                  White & Color Ambiance Starter Kit (4 Bulbs)
+                </h4>
+                <div class="flex items-center gap-1 mb-2">
+                  <span class="text-yellow-500 text-sm">★★★★★</span>
+                  <span class="text-[10px] text-slate-400">(987)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-lg font-black text-primary">$179</span>
+                  <span class="text-xs text-slate-400 line-through">$229</span>
+                </div>
+                <button
+                  class="w-full mt-3 bg-primary text-white py-2 rounded-lg font-bold text-xs uppercase opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Product Card 7 - Muji Desktop Organizer Set -->
+            <div
+              class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100 dark:border-slate-800"
+            >
+              <div class="relative aspect-square overflow-hidden bg-slate-100">
+                <img
+                  class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  src="https://www.muji.com/public/assets/img/items/desktop-organizer-set.jpg"
+                  alt="Muji Organizer"
+                />
+                <span
+                  class="absolute top-2 left-2 bg-primary text-white text-xs font-black px-2 py-1 rounded"
+                  >-10%</span
+                >
+                <button
+                  class="absolute top-2 right-2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-slate-400 hover:text-red-500 transition-colors"
+                >
+                  <span class="text-lg">❤️</span>
+                </button>
+              </div>
+              <div class="p-3">
+                <p class="text-xs text-slate-400 mb-1">
+                  Muji • Office Supplies
+                </p>
+                <h4
+                  class="font-bold text-sm mb-1 line-clamp-2 group-hover:text-primary transition-colors"
+                >
+                  Acrylic Desktop Organizer 3-Piece Set
+                </h4>
+                <div class="flex items-center gap-1 mb-2">
+                  <span class="text-yellow-500 text-sm">★★★★★</span>
+                  <span class="text-[10px] text-slate-400">(543)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-lg font-black text-primary">$44.99</span>
+                  <span class="text-xs text-slate-400 line-through"
+                    >$49.99</span
+                  >
+                </div>
+                <button
+                  class="w-full mt-3 bg-primary text-white py-2 rounded-lg font-bold text-xs uppercase opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Product Card 8 - Pottery Barn Desk Lamp -->
+            <div
+              class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100 dark:border-slate-800"
+            >
+              <div class="relative aspect-square overflow-hidden bg-slate-100">
+                <img
+                  class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  src="https://www.potterybarn.com/pbimgs/ab/images/dp/wcm/202434/0010/industrial-desk-lamp-c.jpg"
+                  alt="Pottery Barn Lamp"
+                />
+                <span
+                  class="absolute top-2 left-2 bg-primary text-white text-xs font-black px-2 py-1 rounded"
+                  >New</span
+                >
+                <button
+                  class="absolute top-2 right-2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-slate-400 hover:text-red-500 transition-colors"
+                >
+                  <span class="text-lg">❤️</span>
+                </button>
+              </div>
+              <div class="p-3">
+                <p class="text-xs text-slate-400 mb-1">
+                  Pottery Barn • Lighting
+                </p>
+                <h4
+                  class="font-bold text-sm mb-1 line-clamp-2 group-hover:text-primary transition-colors"
+                >
+                  Industrial Swing Arm Desk Lamp (Brass)
+                </h4>
+                <div class="flex items-center gap-1 mb-2">
+                  <span class="text-yellow-500 text-sm">★★★★☆</span>
+                  <span class="text-[10px] text-slate-400">(156)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-lg font-black text-primary">$169</span>
+                </div>
+                <button
+                  class="w-full mt-3 bg-primary text-white py-2 rounded-lg font-bold text-xs uppercase opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Featured Promo Strip - Home & Office Deals -->
+          <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div
+              class="bg-gradient-to-r from-amber-700 to-orange-800 rounded-xl p-6 text-white"
+            >
+              <h4 class="text-lg font-black mb-2">🪑 Home Office Makeover</h4>
+              <p class="text-sm opacity-90 mb-4">
+                Buy any desk + chair and get 15% off + free assembly
+              </p>
+              <button
+                class="bg-white text-amber-700 px-6 py-2 rounded-lg font-bold text-sm hover:scale-105 transition-transform"
+              >
+                Shop Sets
+              </button>
+            </div>
+            <div
+              class="bg-gradient-to-r from-teal-700 to-emerald-800 rounded-xl p-6 text-white"
+            >
+              <h4 class="text-lg font-black mb-2">📦 Free Assembly</h4>
+              <p class="text-sm opacity-90 mb-4">
+                On all furniture orders over $499 - limited time only
+              </p>
+              <button
+                class="bg-white text-teal-700 px-6 py-2 rounded-lg font-bold text-sm hover:scale-105 transition-transform"
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <div class="mt-8 flex justify-center items-center gap-2">
+            <button
+              class="w-10 h-10 rounded-lg border border-slate-200 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+            >
+              «
+            </button>
+            <button
+              class="w-10 h-10 rounded-lg bg-primary text-white flex items-center justify-center font-bold"
+            >
+              1
+            </button>
+            <button
+              class="w-10 h-10 rounded-lg border border-slate-200 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+            >
+              2
+            </button>
+            <button
+              class="w-10 h-10 rounded-lg border border-slate-200 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+            >
+              3
+            </button>
+            <button
+              class="w-10 h-10 rounded-lg border border-slate-200 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+            >
+              4
+            </button>
+            <span class="px-2">...</span>
+            <button
+              class="w-10 h-10 rounded-lg border border-slate-200 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+            >
+              22
+            </button>
+            <button
+              class="w-10 h-10 rounded-lg border border-slate-200 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+            >
+              »
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Newsletter Section -->
+      <section
+        class="mt-20 bg-primary/10 rounded-2xl p-8 lg:p-12 border border-primary/20"
+      >
+        <div
+          class="flex flex-col lg:flex-row items-center justify-between gap-8"
+        >
+          <div class="text-center lg:text-left">
+            <h3 class="text-3xl font-black text-slate-900 dark:text-white mb-2">
+              Join the ShopSphere Club
+            </h3>
+            <p class="text-slate-600 dark:text-slate-400 max-w-md">
+              Subscribe to get notifications on our best deals, new arrivals,
+              and exclusive vouchers.
+            </p>
+          </div>
+          <div class="flex flex-col sm:flex-row w-full max-w-lg gap-3">
+            <input
+              class="flex-1 px-6 py-4 rounded-xl bg-white dark:bg-slate-800 border-none focus:ring-2 focus:ring-primary shadow-sm"
+              placeholder="Enter your email address"
+              type="email"
+            />
+            <button
+              class="bg-primary text-white font-bold px-10 py-4 rounded-xl shadow-lg hover:scale-105 transition-transform uppercase tracking-wider"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-20 bg-slate-900 text-slate-300 py-16 px-4 lg:px-20">
+      <div
+        class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12"
+      >
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-2 mb-6 text-white">
+            <div class="bg-primary p-1 rounded">
+              <span class="text-2xl">🛒</span>
+            </div>
+            <h2 class="text-2xl font-black tracking-tighter uppercase">
+              ShopSphere
+            </h2>
+          </div>
+          <p class="mb-8 leading-relaxed max-w-sm">
+            ShopSphere is the world's most customer-centric online shopping
+            platform. We provide millions of items from electronics to home
+            essentials at the best prices with the fastest delivery.
+          </p>
+          <div class="flex gap-4">
+            <a
+              class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+              href="#"
+              ><span class="text-lg">🌐</span></a
+            >
+            <a
+              class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+              href="#"
+              ><span class="text-lg">📱</span></a
+            >
+            <a
+              class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+              href="#"
+              ><span class="text-lg">📷</span></a
+            >
+          </div>
+        </div>
+        <div>
+          <h4
+            class="text-white font-bold mb-6 uppercase tracking-widest text-xs"
+          >
+            Shop with us
+          </h4>
+          <ul class="flex flex-col gap-4 text-sm">
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Our Story</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Categories</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Special Offers</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >New Arrivals</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Gift Cards</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4
+            class="text-white font-bold mb-6 uppercase tracking-widest text-xs"
+          >
+            Customer Service
+          </h4>
+          <ul class="flex flex-col gap-4 text-sm">
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Help Center</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Track Your Order</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Shipping & Delivery</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Returns & Refunds</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Terms & Conditions</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4
+            class="text-white font-bold mb-6 uppercase tracking-widest text-xs"
+          >
+            Stay Updated
+          </h4>
+          <div class="flex flex-col gap-4">
+            <p class="text-sm text-gray-400 mb-2">
+              Get the latest news and updates delivered to your inbox
+            </p>
+            <form class="flex flex-col gap-3">
+              <input
+                type="email"
+                placeholder="Your email address"
+                class="bg-slate-800 border border-slate-700 rounded-xl p-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-primary transition-colors"
+              />
+              <button
+                class="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-4 rounded-xl transition-colors"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div
+        class="max-w-[1440px] mx-auto mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs opacity-60"
+      >
+        <p>© 2019 ShopSphere E-Commerce Ltd. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a class="hover:underline" href="#">Privacy Policy</a>
+          <a class="hover:underline" href="#">Cookie Policy</a>
+          <a class="hover:underline" href="#">Accessibility</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

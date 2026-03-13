@@ -1,0 +1,1558 @@
+<!doctype html>
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#ff9900",
+              "background-light": "#f8f7f5",
+              "background-dark": "#231b0f",
+            },
+            fontFamily: {
+              display: ["Inter"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .icon-sm {
+        width: 1rem;
+        height: 1rem;
+      }
+      .icon-md {
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+      .icon-lg {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+      .icon-xl {
+        width: 2rem;
+        height: 2rem;
+      }
+    </style>
+    <title>ShopSphere | Phones & Tablets</title>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100"
+  >
+    <!-- Announcement Bar -->
+    <div
+      class="bg-slate-900 text-white text-xs py-2 px-4 flex justify-between items-center"
+    >
+      <div class="flex gap-4">
+        <span class="flex items-center gap-1">
+          <span class="text-base">🚚</span>
+          Free delivery on orders over $50
+        </span>
+        <span class="hidden md:flex items-center gap-1 text-primary">
+          <span class="text-base">🏷️</span>
+          20% Off your first order
+        </span>
+      </div>
+      <div class="flex gap-4">
+        <a class="hover:underline" href="#">Help Center</a>
+      </div>
+    </div>
+
+    <!-- Main Header -->
+    <header
+      class="sticky top-0 z-50 bg-white dark:bg-slate-950 shadow-sm border-b border-slate-200 dark:border-slate-800 px-4 lg:px-20 py-4"
+    >
+      <div class="max-w-[1440px] mx-auto flex items-center gap-8">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <div class="bg-primary text-white p-1 rounded-lg">
+            <span class="text-3xl">🛒</span>
+          </div>
+          <h1
+            class="text-2xl font-black tracking-tighter text-slate-900 dark:text-white uppercase"
+          >
+            ShopSphere
+          </h1>
+        </div>
+        <!-- Search Bar -->
+        <div class="flex-1 max-w-2xl hidden md:block">
+          <div class="relative flex items-center">
+            <span class="absolute left-3 text-slate-400 text-lg">🔍</span>
+            <input
+              class="w-full pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-lg focus:ring-2 focus:ring-primary text-sm"
+              placeholder="Search for phones, tablets, accessories..."
+              type="text"
+            />
+            <button
+              class="ml-2 bg-primary text-white px-6 py-2 rounded-lg font-bold hover:bg-opacity-90 transition-colors uppercase text-sm shadow-sm"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+        <!-- User Actions -->
+        <div class="flex items-center gap-6">
+          <button
+            class="flex items-center gap-2 hover:text-primary transition-colors"
+          >
+            <span class="text-xl">👤</span>
+            <div class="hidden lg:block text-left leading-tight">
+              <p class="text-[10px] text-slate-500">Welcome,</p>
+              <p class="text-xs font-bold">Account</p>
+            </div>
+          </button>
+          <button
+            class="relative flex items-center gap-2 hover:text-primary transition-colors"
+          >
+            <span class="text-xl">❤️</span>
+            <span
+              class="absolute -top-1 -right-1 bg-primary text-white text-[10px] rounded-full w-4 h-4 flex items-center justify-center font-bold border-2 border-white"
+              >0</span
+            >
+            <p class="hidden lg:block text-xs font-bold">Wishlist</p>
+          </button>
+          <button
+            class="relative flex items-center gap-2 hover:text-primary transition-colors"
+          >
+            <span class="text-xl">🛍️</span>
+            <span
+              class="absolute -top-1 -right-1 bg-primary text-white text-[10px] rounded-full w-4 h-4 flex items-center justify-center font-bold border-2 border-white"
+              >1</span
+            >
+            <p class="hidden lg:block text-xs font-bold">Cart</p>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div
+      class="max-w-[1440px] mx-auto px-4 lg:px-10 pt-4 text-xs text-slate-500"
+    >
+      <a href="/frontend/index.html" class="hover:text-primary">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-slate-900 dark:text-slate-300 font-medium"
+        >Phones & Tablets</span
+      >
+    </div>
+
+    <main class="max-w-[1440px] mx-auto px-4 lg:px-10 py-6">
+      <!-- Category Hero Banner - Phones & Tablets Specific -->
+      <div
+        class="relative rounded-xl overflow-hidden h-[320px] sm:h-[360px] lg:h-[400px] shadow-lg group mb-8"
+      >
+        <div
+          class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+          style="
+            background-image:
+              linear-gradient(
+                to right,
+                rgba(0, 20, 40, 0.8) 0%,
+                rgba(0, 40, 80, 0.5) 50%,
+                rgba(0, 60, 120, 0.3) 100%
+              ),
+              url(&quot;https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=2080&auto=format&fit=crop&quot;);
+          "
+        ></div>
+        <div
+          class="absolute inset-0 flex flex-col justify-center px-8 md:px-16 text-white"
+        >
+          <span
+            class="bg-primary text-black font-black uppercase text-xs px-3 py-1 rounded-full w-fit mb-4"
+            >Latest Tech 2024</span
+          >
+          <h2
+            class="text-4xl md:text-5xl lg:text-6xl font-black mb-4 max-w-2xl leading-tight"
+          >
+            Connect Smarter
+          </h2>
+          <p class="text-lg md:text-xl mb-6 max-w-xl opacity-90">
+            Flagship phones and tablets. Up to
+            <span class="text-primary font-bold">$300 off</span> + free gifts.
+          </p>
+          <div class="flex gap-4">
+            <button
+              class="bg-primary text-white px-8 py-3 rounded-lg font-bold hover:scale-105 transition-transform"
+            >
+              Shop iPhones
+            </button>
+            <button
+              class="bg-white/20 backdrop-blur-md text-white px-8 py-3 rounded-lg font-bold border border-white/30 hover:bg-white/30 transition-all"
+            >
+              Shop Android
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content Area with Sidebar -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <!-- Sidebar Filters - Mobile Collapsible, Desktop Always Visible -->
+        <aside class="lg:col-span-3">
+          <!-- Mobile Filter Toggle -->
+          <details
+            class="lg:hidden w-full mb-4 bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800"
+          >
+            <summary
+              class="flex items-center justify-between px-4 py-4 bg-slate-50 dark:bg-slate-800 text-sm font-bold cursor-pointer list-none rounded-xl"
+            >
+              <span class="flex items-center gap-2">
+                <span class="text-lg">🔍</span>
+                <span>FILTERS & CATEGORIES</span>
+              </span>
+              <span class="text-lg transition-transform group-open:rotate-180"
+                >▼</span
+              >
+            </summary>
+            <div class="p-4 border-t border-slate-200 dark:border-slate-700">
+              <!-- Mobile Filter Content (same as desktop but collapsible) -->
+              <div class="space-y-6">
+                <!-- Categories -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3 flex items-center gap-2">
+                    <span class="text-primary">📱</span> Categories
+                  </h4>
+                  <ul class="space-y-2 text-sm">
+                    <li>
+                      <a href="#" class="text-primary font-medium"
+                        >All Phones & Tablets</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary">Smartphones</a>
+                    </li>
+                    <li><a href="#" class="hover:text-primary">Tablets</a></li>
+                    <li><a href="#" class="hover:text-primary">iPhones</a></li>
+                    <li>
+                      <a href="#" class="hover:text-primary">Samsung Galaxy</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary">Google Pixel</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary">Accessories</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary">Refurbished</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Price Range -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3">💰 Price Range</h4>
+                  <div class="space-y-2">
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Under $200</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      $200 - $400</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      $400 - $600</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      $600 - $900</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      $900 - $1,200</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Over $1,200</label
+                    >
+                  </div>
+                </div>
+
+                <!-- Brands -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3">🏷️ Brands</h4>
+                  <div class="space-y-2">
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Apple</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Samsung</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Google</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      OnePlus</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Xiaomi</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Huawei</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Motorola</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Nokia</label
+                    >
+                  </div>
+                </div>
+
+                <!-- Storage Capacity -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3">💾 Storage</h4>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                      >64GB</span
+                    >
+                    <span
+                      class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                      >128GB</span
+                    >
+                    <span
+                      class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                      >256GB</span
+                    >
+                    <span
+                      class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                      >512GB</span
+                    >
+                    <span
+                      class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                      >1TB</span
+                    >
+                  </div>
+                </div>
+
+                <!-- RAM -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3">🧠 RAM</h4>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                      >4GB</span
+                    >
+                    <span
+                      class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                      >6GB</span
+                    >
+                    <span
+                      class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                      >8GB</span
+                    >
+                    <span
+                      class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                      >12GB</span
+                    >
+                    <span
+                      class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                      >16GB</span
+                    >
+                  </div>
+                </div>
+
+                <!-- Color -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3">🎨 Color</h4>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="w-6 h-6 rounded-full bg-black border-2 border-transparent cursor-pointer hover:scale-110"
+                    ></span>
+                    <span
+                      class="w-6 h-6 rounded-full bg-gray-400 cursor-pointer hover:scale-110"
+                    ></span>
+                    <span
+                      class="w-6 h-6 rounded-full bg-white border border-slate-300 cursor-pointer hover:scale-110"
+                    ></span>
+                    <span
+                      class="w-6 h-6 rounded-full bg-blue-600 cursor-pointer hover:scale-110"
+                    ></span>
+                    <span
+                      class="w-6 h-6 rounded-full bg-purple-600 cursor-pointer hover:scale-110"
+                    ></span>
+                    <span
+                      class="w-6 h-6 rounded-full bg-red-600 cursor-pointer hover:scale-110"
+                    ></span>
+                    <span
+                      class="w-6 h-6 rounded-full bg-green-600 cursor-pointer hover:scale-110"
+                    ></span>
+                    <span
+                      class="w-6 h-6 rounded-full bg-yellow-500 cursor-pointer hover:scale-110"
+                    ></span>
+                  </div>
+                </div>
+
+                <!-- Operating System -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3">📱 OS</h4>
+                  <div class="space-y-2">
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      iOS</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Android</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      HarmonyOS</label
+                    >
+                  </div>
+                </div>
+
+                <!-- Ratings -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3">⭐ Customer Ratings</h4>
+                  <div class="space-y-2">
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      ★★★★ & up (2.3k)</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      ★★★ & up (4.1k)</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      ★★ & up (5.8k)</label
+                    >
+                  </div>
+                </div>
+
+                <!-- Discount -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3">🏷️ Discount</h4>
+                  <div class="space-y-2">
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      10% or more</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      20% or more</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      30% or more</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      40% or more</label
+                    >
+                  </div>
+                </div>
+
+                <!-- Availability -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3">📦 Availability</h4>
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    In Stock</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Pre-order</label
+                  >
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <!-- Desktop Filters (hidden on mobile, visible on lg) -->
+          <div
+            class="hidden lg:block bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 p-5 sticky top-24"
+          >
+            <h3 class="font-bold text-lg mb-5 flex items-center gap-2">
+              <span class="text-primary text-xl">🔍</span> Filters
+            </h3>
+            <div class="space-y-6">
+              <!-- Categories -->
+              <div>
+                <h4 class="font-bold text-sm mb-3 flex items-center gap-2">
+                  <span class="text-primary">📱</span> Categories
+                </h4>
+                <ul class="space-y-2 text-sm">
+                  <li>
+                    <a href="#" class="text-primary font-medium"
+                      >All Phones & Tablets</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-primary">Smartphones</a>
+                  </li>
+                  <li><a href="#" class="hover:text-primary">Tablets</a></li>
+                  <li><a href="#" class="hover:text-primary">iPhones</a></li>
+                  <li>
+                    <a href="#" class="hover:text-primary">Samsung Galaxy</a>
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-primary">Google Pixel</a>
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-primary">Accessories</a>
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-primary">Refurbished</a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Price Range -->
+              <div>
+                <h4 class="font-bold text-sm mb-3">💰 Price Range</h4>
+                <div class="space-y-2">
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Under $200</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    $200 - $400</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    $400 - $600</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    $600 - $900</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    $900 - $1,200</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Over $1,200</label
+                  >
+                </div>
+              </div>
+
+              <!-- Brands -->
+              <div>
+                <h4 class="font-bold text-sm mb-3">🏷️ Brands</h4>
+                <div class="space-y-2">
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Apple</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Samsung</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Google</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    OnePlus</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Xiaomi</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Huawei</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Motorola</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Nokia</label
+                  >
+                </div>
+              </div>
+
+              <!-- Storage Capacity -->
+              <div>
+                <h4 class="font-bold text-sm mb-3">💾 Storage</h4>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                    >64GB</span
+                  >
+                  <span
+                    class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                    >128GB</span
+                  >
+                  <span
+                    class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                    >256GB</span
+                  >
+                  <span
+                    class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                    >512GB</span
+                  >
+                  <span
+                    class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                    >1TB</span
+                  >
+                </div>
+              </div>
+
+              <!-- RAM -->
+              <div>
+                <h4 class="font-bold text-sm mb-3">🧠 RAM</h4>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                    >4GB</span
+                  >
+                  <span
+                    class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                    >6GB</span
+                  >
+                  <span
+                    class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                    >8GB</span
+                  >
+                  <span
+                    class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                    >12GB</span
+                  >
+                  <span
+                    class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                    >16GB</span
+                  >
+                </div>
+              </div>
+
+              <!-- Color -->
+              <div>
+                <h4 class="font-bold text-sm mb-3">🎨 Color</h4>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="w-6 h-6 rounded-full bg-black border-2 border-transparent cursor-pointer hover:scale-110"
+                  ></span>
+                  <span
+                    class="w-6 h-6 rounded-full bg-gray-400 cursor-pointer hover:scale-110"
+                  ></span>
+                  <span
+                    class="w-6 h-6 rounded-full bg-white border border-slate-300 cursor-pointer hover:scale-110"
+                  ></span>
+                  <span
+                    class="w-6 h-6 rounded-full bg-blue-600 cursor-pointer hover:scale-110"
+                  ></span>
+                  <span
+                    class="w-6 h-6 rounded-full bg-purple-600 cursor-pointer hover:scale-110"
+                  ></span>
+                  <span
+                    class="w-6 h-6 rounded-full bg-red-600 cursor-pointer hover:scale-110"
+                  ></span>
+                  <span
+                    class="w-6 h-6 rounded-full bg-green-600 cursor-pointer hover:scale-110"
+                  ></span>
+                  <span
+                    class="w-6 h-6 rounded-full bg-yellow-500 cursor-pointer hover:scale-110"
+                  ></span>
+                </div>
+              </div>
+
+              <!-- Operating System -->
+              <div>
+                <h4 class="font-bold text-sm mb-3">📱 OS</h4>
+                <div class="space-y-2">
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    iOS</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Android</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    HarmonyOS</label
+                  >
+                </div>
+              </div>
+
+              <!-- Ratings -->
+              <div>
+                <h4 class="font-bold text-sm mb-3">⭐ Customer Ratings</h4>
+                <div class="space-y-2">
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    ★★★★ & up (2.3k)</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    ★★★ & up (4.1k)</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    ★★ & up (5.8k)</label
+                  >
+                </div>
+              </div>
+
+              <!-- Discount -->
+              <div>
+                <h4 class="font-bold text-sm mb-3">🏷️ Discount</h4>
+                <div class="space-y-2">
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    10% or more</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    20% or more</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    30% or more</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    40% or more</label
+                  >
+                </div>
+              </div>
+
+              <!-- Availability -->
+              <div>
+                <h4 class="font-bold text-sm mb-3">📦 Availability</h4>
+                <label class="flex items-center gap-2 text-sm"
+                  ><input
+                    type="checkbox"
+                    class="rounded border-slate-300 text-primary focus:ring-primary"
+                  />
+                  In Stock</label
+                >
+                <label class="flex items-center gap-2 text-sm"
+                  ><input
+                    type="checkbox"
+                    class="rounded border-slate-300 text-primary focus:ring-primary"
+                  />
+                  Pre-order</label
+                >
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Product Listing Area (Main Content) -->
+        <div class="lg:col-span-9">
+          <!-- Toolbar -->
+          <div
+            class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 p-4 mb-6 flex flex-wrap items-center justify-between gap-4"
+          >
+            <div class="flex items-center gap-2">
+              <span class="text-sm font-medium">876 Products</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="flex items-center gap-2 text-sm">
+                <label for="sort" class="text-slate-500 hidden sm:block"
+                  >Sort by:</label
+                >
+                <select
+                  id="sort"
+                  class="bg-slate-100 dark:bg-slate-800 border-none rounded-lg text-sm p-2 focus:ring-primary"
+                >
+                  <option>Featured</option>
+                  <option>Price: Low to High</option>
+                  <option>Price: High to Low</option>
+                  <option>Newest Arrivals</option>
+                  <option>Top Rated</option>
+                </select>
+              </div>
+              <div class="flex gap-1 border-l pl-4 border-slate-200">
+                <button class="p-2 bg-primary/10 rounded-lg text-primary">
+                  <span class="text-lg">⊞</span>
+                </button>
+                <button class="p-2 hover:bg-slate-100 rounded-lg">
+                  <span class="text-lg">☷</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Grid - Phones & Tablets -->
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <!-- Product Card 1 - iPhone 15 Pro -->
+            <div
+              class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100 dark:border-slate-800"
+            >
+              <div class="relative aspect-square overflow-hidden bg-slate-100">
+                <img
+                  class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-15-pro.jpg"
+                  alt="iPhone 15 Pro"
+                />
+                <span
+                  class="absolute top-2 left-2 bg-primary text-white text-xs font-black px-2 py-1 rounded"
+                  >New</span
+                >
+                <button
+                  class="absolute top-2 right-2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-slate-400 hover:text-red-500 transition-colors"
+                >
+                  <span class="text-lg">❤️</span>
+                </button>
+              </div>
+              <div class="p-3">
+                <p class="text-xs text-slate-400 mb-1">Apple • 5G</p>
+                <h4
+                  class="font-bold text-sm mb-1 line-clamp-2 group-hover:text-primary transition-colors"
+                >
+                  iPhone 15 Pro (256GB) - Titanium
+                </h4>
+                <div class="flex items-center gap-1 mb-2">
+                  <span class="text-yellow-500 text-sm">★★★★★</span>
+                  <span class="text-[10px] text-slate-400">(1.2k)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-lg font-black text-primary">$1,299</span>
+                  <span class="text-xs text-slate-400 line-through"
+                    >$1,399</span
+                  >
+                </div>
+                <button
+                  class="w-full mt-3 bg-primary text-white py-2 rounded-lg font-bold text-xs uppercase opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Product Card 2 - Samsung S24 Ultra -->
+            <div
+              class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100 dark:border-slate-800"
+            >
+              <div class="relative aspect-square overflow-hidden bg-slate-100">
+                <img
+                  class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  src="https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g.jpg"
+                  alt="Samsung S24 Ultra"
+                />
+                <span
+                  class="absolute top-2 left-2 bg-primary text-white text-xs font-black px-2 py-1 rounded"
+                  >-15%</span
+                >
+                <button
+                  class="absolute top-2 right-2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-slate-400 hover:text-red-500 transition-colors"
+                >
+                  <span class="text-lg">❤️</span>
+                </button>
+              </div>
+              <div class="p-3">
+                <p class="text-xs text-slate-400 mb-1">Samsung • AI Phone</p>
+                <h4
+                  class="font-bold text-sm mb-1 line-clamp-2 group-hover:text-primary transition-colors"
+                >
+                  Galaxy S24 Ultra (512GB) - Titanium
+                </h4>
+                <div class="flex items-center gap-1 mb-2">
+                  <span class="text-yellow-500 text-sm">★★★★★</span>
+                  <span class="text-[10px] text-slate-400">(856)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-lg font-black text-primary">$1,199</span>
+                  <span class="text-xs text-slate-400 line-through"
+                    >$1,419</span
+                  >
+                </div>
+                <button
+                  class="w-full mt-3 bg-primary text-white py-2 rounded-lg font-bold text-xs uppercase opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Product Card 3 - iPad Pro -->
+            <div
+              class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100 dark:border-slate-800"
+            >
+              <div class="relative aspect-square overflow-hidden bg-slate-100">
+                <img
+                  class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  src="https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-pro-129-2022.jpg"
+                  alt="iPad Pro"
+                />
+                <span
+                  class="absolute top-2 left-2 bg-primary text-white text-xs font-black px-2 py-1 rounded"
+                  >-10%</span
+                >
+                <button
+                  class="absolute top-2 right-2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-slate-400 hover:text-red-500 transition-colors"
+                >
+                  <span class="text-lg">❤️</span>
+                </button>
+              </div>
+              <div class="p-3">
+                <p class="text-xs text-slate-400 mb-1">Apple • Tablet</p>
+                <h4
+                  class="font-bold text-sm mb-1 line-clamp-2 group-hover:text-primary transition-colors"
+                >
+                  iPad Pro 12.9" (256GB) M2 Chip
+                </h4>
+                <div class="flex items-center gap-1 mb-2">
+                  <span class="text-yellow-500 text-sm">★★★★★</span>
+                  <span class="text-[10px] text-slate-400">(432)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-lg font-black text-primary">$1,099</span>
+                  <span class="text-xs text-slate-400 line-through"
+                    >$1,199</span
+                  >
+                </div>
+                <button
+                  class="w-full mt-3 bg-primary text-white py-2 rounded-lg font-bold text-xs uppercase opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Product Card 4 - Google Pixel 8 -->
+            <div
+              class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100 dark:border-slate-800"
+            >
+              <div class="relative aspect-square overflow-hidden bg-slate-100">
+                <img
+                  class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  src="https://fdn2.gsmarena.com/vv/bigpic/google-pixel-8.jpg"
+                  alt="Google Pixel 8"
+                />
+                <span
+                  class="absolute top-2 left-2 bg-primary text-white text-xs font-black px-2 py-1 rounded"
+                  >-20%</span
+                >
+                <button
+                  class="absolute top-2 right-2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-slate-400 hover:text-red-500 transition-colors"
+                >
+                  <span class="text-lg">❤️</span>
+                </button>
+              </div>
+              <div class="p-3">
+                <p class="text-xs text-slate-400 mb-1">Google • AI Camera</p>
+                <h4
+                  class="font-bold text-sm mb-1 line-clamp-2 group-hover:text-primary transition-colors"
+                >
+                  Google Pixel 8 (128GB) - Obsidian
+                </h4>
+                <div class="flex items-center gap-1 mb-2">
+                  <span class="text-yellow-500 text-sm">★★★★★</span>
+                  <span class="text-[10px] text-slate-400">(312)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-lg font-black text-primary">$599</span>
+                  <span class="text-xs text-slate-400 line-through">$699</span>
+                </div>
+                <button
+                  class="w-full mt-3 bg-primary text-white py-2 rounded-lg font-bold text-xs uppercase opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Product Card 5 - OnePlus 12 -->
+            <div
+              class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100 dark:border-slate-800"
+            >
+              <div class="relative aspect-square overflow-hidden bg-slate-100">
+                <img
+                  class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  src="https://fdn2.gsmarena.com/vv/bigpic/oneplus-12.jpg"
+                  alt="OnePlus 12"
+                />
+                <span
+                  class="absolute top-2 left-2 bg-primary text-white text-xs font-black px-2 py-1 rounded"
+                  >New</span
+                >
+                <button
+                  class="absolute top-2 right-2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-slate-400 hover:text-red-500 transition-colors"
+                >
+                  <span class="text-lg">❤️</span>
+                </button>
+              </div>
+              <div class="p-3">
+                <p class="text-xs text-slate-400 mb-1">
+                  OnePlus • Fast Charging
+                </p>
+                <h4
+                  class="font-bold text-sm mb-1 line-clamp-2 group-hover:text-primary transition-colors"
+                >
+                  OnePlus 12 (256GB) - Emerald
+                </h4>
+                <div class="flex items-center gap-1 mb-2">
+                  <span class="text-yellow-500 text-sm">★★★★☆</span>
+                  <span class="text-[10px] text-slate-400">(178)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-lg font-black text-primary">$799</span>
+                </div>
+                <button
+                  class="w-full mt-3 bg-primary text-white py-2 rounded-lg font-bold text-xs uppercase opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Product Card 6 - Samsung Tab S9 -->
+            <div
+              class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100 dark:border-slate-800"
+            >
+              <div class="relative aspect-square overflow-hidden bg-slate-100">
+                <img
+                  class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  src="https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-s9.jpg"
+                  alt="Samsung Tab S9"
+                />
+                <span
+                  class="absolute top-2 left-2 bg-primary text-white text-xs font-black px-2 py-1 rounded"
+                  >-12%</span
+                >
+                <button
+                  class="absolute top-2 right-2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-slate-400 hover:text-red-500 transition-colors"
+                >
+                  <span class="text-lg">❤️</span>
+                </button>
+              </div>
+              <div class="p-3">
+                <p class="text-xs text-slate-400 mb-1">Samsung • Tablet</p>
+                <h4
+                  class="font-bold text-sm mb-1 line-clamp-2 group-hover:text-primary transition-colors"
+                >
+                  Galaxy Tab S9+ (256GB) with S-Pen
+                </h4>
+                <div class="flex items-center gap-1 mb-2">
+                  <span class="text-yellow-500 text-sm">★★★★★</span>
+                  <span class="text-[10px] text-slate-400">(267)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-lg font-black text-primary">$899</span>
+                  <span class="text-xs text-slate-400 line-through"
+                    >$1,019</span
+                  >
+                </div>
+                <button
+                  class="w-full mt-3 bg-primary text-white py-2 rounded-lg font-bold text-xs uppercase opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Product Card 7 - Xiaomi 14 Ultra -->
+            <div
+              class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100 dark:border-slate-800"
+            >
+              <div class="relative aspect-square overflow-hidden bg-slate-100">
+                <img
+                  class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  src="https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14-ultra.jpg"
+                  alt="Xiaomi 14 Ultra"
+                />
+                <span
+                  class="absolute top-2 left-2 bg-primary text-white text-xs font-black px-2 py-1 rounded"
+                  >-18%</span
+                >
+                <button
+                  class="absolute top-2 right-2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-slate-400 hover:text-red-500 transition-colors"
+                >
+                  <span class="text-lg">❤️</span>
+                </button>
+              </div>
+              <div class="p-3">
+                <p class="text-xs text-slate-400 mb-1">Xiaomi • Leica Camera</p>
+                <h4
+                  class="font-bold text-sm mb-1 line-clamp-2 group-hover:text-primary transition-colors"
+                >
+                  Xiaomi 14 Ultra (512GB) - Black
+                </h4>
+                <div class="flex items-center gap-1 mb-2">
+                  <span class="text-yellow-500 text-sm">★★★★☆</span>
+                  <span class="text-[10px] text-slate-400">(98)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-lg font-black text-primary">$999</span>
+                  <span class="text-xs text-slate-400 line-through"
+                    >$1,219</span
+                  >
+                </div>
+                <button
+                  class="w-full mt-3 bg-primary text-white py-2 rounded-lg font-bold text-xs uppercase opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Product Card 8 - Nothing Phone 2 -->
+            <div
+              class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100 dark:border-slate-800"
+            >
+              <div class="relative aspect-square overflow-hidden bg-slate-100">
+                <img
+                  class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  src="https://fdn2.gsmarena.com/vv/bigpic/nothing-phone-2.jpg"
+                  alt="Nothing Phone 2"
+                />
+                <span
+                  class="absolute top-2 left-2 bg-primary text-white text-xs font-black px-2 py-1 rounded"
+                  >-8%</span
+                >
+                <button
+                  class="absolute top-2 right-2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-slate-400 hover:text-red-500 transition-colors"
+                >
+                  <span class="text-lg">❤️</span>
+                </button>
+              </div>
+              <div class="p-3">
+                <p class="text-xs text-slate-400 mb-1">
+                  Nothing • Glyph Interface
+                </p>
+                <h4
+                  class="font-bold text-sm mb-1 line-clamp-2 group-hover:text-primary transition-colors"
+                >
+                  Nothing Phone (2) 256GB - White
+                </h4>
+                <div class="flex items-center gap-1 mb-2">
+                  <span class="text-yellow-500 text-sm">★★★★☆</span>
+                  <span class="text-[10px] text-slate-400">(156)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-lg font-black text-primary">$599</span>
+                  <span class="text-xs text-slate-400 line-through">$649</span>
+                </div>
+                <button
+                  class="w-full mt-3 bg-primary text-white py-2 rounded-lg font-bold text-xs uppercase opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Featured Promo Strip - Phone Deals -->
+          <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div
+              class="bg-gradient-to-r from-blue-800 to-indigo-900 rounded-xl p-6 text-white"
+            >
+              <h4 class="text-lg font-black mb-2">📱 Trade-In & Save</h4>
+              <p class="text-sm opacity-90 mb-4">
+                Get up to $600 off when you trade in your old phone
+              </p>
+              <button
+                class="bg-white text-blue-800 px-6 py-2 rounded-lg font-bold text-sm hover:scale-105 transition-transform"
+              >
+                Learn More
+              </button>
+            </div>
+            <div
+              class="bg-gradient-to-r from-green-700 to-teal-600 rounded-xl p-6 text-white"
+            >
+              <h4 class="text-lg font-black mb-2">🔋 Accessories Bundle</h4>
+              <p class="text-sm opacity-90 mb-4">
+                Buy any phone and get 30% off on cases, chargers & screen
+                protectors
+              </p>
+              <button
+                class="bg-white text-green-700 px-6 py-2 rounded-lg font-bold text-sm hover:scale-105 transition-transform"
+              >
+                Shop Bundle
+              </button>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <div class="mt-8 flex justify-center items-center gap-2">
+            <button
+              class="w-10 h-10 rounded-lg border border-slate-200 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+            >
+              «
+            </button>
+            <button
+              class="w-10 h-10 rounded-lg bg-primary text-white flex items-center justify-center font-bold"
+            >
+              1
+            </button>
+            <button
+              class="w-10 h-10 rounded-lg border border-slate-200 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+            >
+              2
+            </button>
+            <button
+              class="w-10 h-10 rounded-lg border border-slate-200 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+            >
+              3
+            </button>
+            <button
+              class="w-10 h-10 rounded-lg border border-slate-200 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+            >
+              4
+            </button>
+            <span class="px-2">...</span>
+            <button
+              class="w-10 h-10 rounded-lg border border-slate-200 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+            >
+              15
+            </button>
+            <button
+              class="w-10 h-10 rounded-lg border border-slate-200 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+            >
+              »
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Newsletter Section -->
+      <section
+        class="mt-20 bg-primary/10 rounded-2xl p-8 lg:p-12 border border-primary/20"
+      >
+        <div
+          class="flex flex-col lg:flex-row items-center justify-between gap-8"
+        >
+          <div class="text-center lg:text-left">
+            <h3 class="text-3xl font-black text-slate-900 dark:text-white mb-2">
+              Join the ShopSphere Club
+            </h3>
+            <p class="text-slate-600 dark:text-slate-400 max-w-md">
+              Subscribe to get notifications on our best deals, new arrivals,
+              and exclusive vouchers.
+            </p>
+          </div>
+          <div class="flex flex-col sm:flex-row w-full max-w-lg gap-3">
+            <input
+              class="flex-1 px-6 py-4 rounded-xl bg-white dark:bg-slate-800 border-none focus:ring-2 focus:ring-primary shadow-sm"
+              placeholder="Enter your email address"
+              type="email"
+            />
+            <button
+              class="bg-primary text-white font-bold px-10 py-4 rounded-xl shadow-lg hover:scale-105 transition-transform uppercase tracking-wider"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-20 bg-slate-900 text-slate-300 py-16 px-4 lg:px-20">
+      <div
+        class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12"
+      >
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-2 mb-6 text-white">
+            <div class="bg-primary p-1 rounded">
+              <span class="text-2xl">🛒</span>
+            </div>
+            <h2 class="text-2xl font-black tracking-tighter uppercase">
+              ShopSphere
+            </h2>
+          </div>
+          <p class="mb-8 leading-relaxed max-w-sm">
+            ShopSphere is the world's most customer-centric online shopping
+            platform. We provide millions of items from electronics to home
+            essentials at the best prices with the fastest delivery.
+          </p>
+          <div class="flex gap-4">
+            <a
+              class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+              href="#"
+              ><span class="text-lg">🌐</span></a
+            >
+            <a
+              class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+              href="#"
+              ><span class="text-lg">📱</span></a
+            >
+            <a
+              class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+              href="#"
+              ><span class="text-lg">📷</span></a
+            >
+          </div>
+        </div>
+        <div>
+          <h4
+            class="text-white font-bold mb-6 uppercase tracking-widest text-xs"
+          >
+            Shop with us
+          </h4>
+          <ul class="flex flex-col gap-4 text-sm">
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Our Story</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Categories</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Special Offers</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >New Arrivals</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Gift Cards</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4
+            class="text-white font-bold mb-6 uppercase tracking-widest text-xs"
+          >
+            Customer Service
+          </h4>
+          <ul class="flex flex-col gap-4 text-sm">
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Help Center</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Track Your Order</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Shipping & Delivery</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Returns & Refunds</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Terms & Conditions</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4
+            class="text-white font-bold mb-6 uppercase tracking-widest text-xs"
+          >
+            Stay Updated
+          </h4>
+          <div class="flex flex-col gap-4">
+            <p class="text-sm text-gray-400 mb-2">
+              Get the latest news and updates delivered to your inbox
+            </p>
+            <form class="flex flex-col gap-3">
+              <input
+                type="email"
+                placeholder="Your email address"
+                class="bg-slate-800 border border-slate-700 rounded-xl p-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-primary transition-colors"
+              />
+              <button
+                class="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-4 rounded-xl transition-colors"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div
+        class="max-w-[1440px] mx-auto mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs opacity-60"
+      >
+        <p>© 2019 ShopSphere E-Commerce Ltd. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a class="hover:underline" href="#">Privacy Policy</a>
+          <a class="hover:underline" href="#">Cookie Policy</a>
+          <a class="hover:underline" href="#">Accessibility</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,1873 @@
+<!doctype html>
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#ff9900",
+              "background-light": "#f8f7f5",
+              "background-dark": "#231b0f",
+            },
+            fontFamily: {
+              display: ["Inter"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .icon-sm {
+        width: 1rem;
+        height: 1rem;
+      }
+      .icon-md {
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+      .icon-lg {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+      .icon-xl {
+        width: 2rem;
+        height: 2rem;
+      }
+    </style>
+    <title>ShopSphere | Gaming</title>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100"
+  >
+    <!-- Announcement Bar -->
+    <div
+      class="bg-slate-900 text-white text-xs py-2 px-4 flex justify-between items-center"
+    >
+      <div class="flex gap-4">
+        <span class="flex items-center gap-1">
+          <span class="text-base">🚚</span>
+          Free delivery on orders over $50
+        </span>
+        <span class="hidden md:flex items-center gap-1 text-primary">
+          <span class="text-base">🏷️</span>
+          20% Off your first order
+        </span>
+      </div>
+      <div class="flex gap-4">
+        <a class="hover:underline" href="#">Help Center</a>
+      </div>
+    </div>
+
+    <!-- Main Header -->
+    <header
+      class="sticky top-0 z-50 bg-white dark:bg-slate-950 shadow-sm border-b border-slate-200 dark:border-slate-800 px-4 lg:px-20 py-4"
+    >
+      <div class="max-w-[1440px] mx-auto flex items-center gap-8">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <div class="bg-primary text-white p-1 rounded-lg">
+            <span class="text-3xl">🛒</span>
+          </div>
+          <h1
+            class="text-2xl font-black tracking-tighter text-slate-900 dark:text-white uppercase"
+          >
+            ShopSphere
+          </h1>
+        </div>
+        <!-- Search Bar -->
+        <div class="flex-1 max-w-2xl hidden md:block">
+          <div class="relative flex items-center">
+            <span class="absolute left-3 text-slate-400 text-lg">🔍</span>
+            <input
+              class="w-full pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-lg focus:ring-2 focus:ring-primary text-sm"
+              placeholder="Search for games, consoles, accessories, PC parts..."
+              type="text"
+            />
+            <button
+              class="ml-2 bg-primary text-white px-6 py-2 rounded-lg font-bold hover:bg-opacity-90 transition-colors uppercase text-sm shadow-sm"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+        <!-- User Actions -->
+        <div class="flex items-center gap-6">
+          <button
+            class="flex items-center gap-2 hover:text-primary transition-colors"
+          >
+            <span class="text-xl">👤</span>
+            <div class="hidden lg:block text-left leading-tight">
+              <p class="text-[10px] text-slate-500">Welcome,</p>
+              <p class="text-xs font-bold">Account</p>
+            </div>
+          </button>
+          <button
+            class="relative flex items-center gap-2 hover:text-primary transition-colors"
+          >
+            <span class="text-xl">❤️</span>
+            <span
+              class="absolute -top-1 -right-1 bg-primary text-white text-[10px] rounded-full w-4 h-4 flex items-center justify-center font-bold border-2 border-white"
+              >0</span
+            >
+            <p class="hidden lg:block text-xs font-bold">Wishlist</p>
+          </button>
+          <button
+            class="relative flex items-center gap-2 hover:text-primary transition-colors"
+          >
+            <span class="text-xl">🛍️</span>
+            <span
+              class="absolute -top-1 -right-1 bg-primary text-white text-[10px] rounded-full w-4 h-4 flex items-center justify-center font-bold border-2 border-white"
+              >2</span
+            >
+            <p class="hidden lg:block text-xs font-bold">Cart</p>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div
+      class="max-w-[1440px] mx-auto px-4 lg:px-10 pt-4 text-xs text-slate-500"
+    >
+      <a href="/frontend/index.html" class="hover:text-primary">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-slate-900 dark:text-slate-300 font-medium">Gaming</span>
+    </div>
+
+    <main class="max-w-[1440px] mx-auto px-4 lg:px-10 py-6">
+      <!-- Category Hero Banner - Gaming Specific -->
+      <div
+        class="relative rounded-xl overflow-hidden h-[320px] sm:h-[360px] lg:h-[400px] shadow-lg group mb-8"
+      >
+        <div
+          class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+          style="
+            background-image:
+              linear-gradient(
+                to right,
+                rgba(30, 30, 50, 0.8) 0%,
+                rgba(70, 40, 90, 0.6) 50%,
+                rgba(20, 20, 40, 0.7) 100%
+              ),
+              url(&quot;https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?q=80&w=2071&auto=format&fit=crop&quot;);
+          "
+        ></div>
+        <div
+          class="absolute inset-0 flex flex-col justify-center px-8 md:px-16 text-white"
+        >
+          <span
+            class="bg-primary text-black font-black uppercase text-xs px-3 py-1 rounded-full w-fit mb-4"
+            >Gear Up</span
+          >
+          <h2
+            class="text-4xl md:text-5xl lg:text-6xl font-black mb-4 max-w-2xl leading-tight"
+          >
+            Level Up Your Setup
+          </h2>
+          <p class="text-lg md:text-xl mb-6 max-w-xl opacity-90">
+            Next-gen consoles, PC hardware, and exclusive games. Up to
+            <span class="text-primary font-bold">25% off</span> on pre-orders.
+          </p>
+          <div class="flex gap-4">
+            <button
+              class="bg-primary text-white px-8 py-3 rounded-lg font-bold hover:scale-105 transition-transform"
+            >
+              Shop Consoles
+            </button>
+            <button
+              class="bg-white/20 backdrop-blur-md text-white px-8 py-3 rounded-lg font-bold border border-white/30 hover:bg-white/30 transition-all"
+            >
+              Gaming PCs
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content Area with Sidebar -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <!-- Sidebar Filters - Mobile Collapsible, Desktop Always Visible -->
+        <aside class="lg:col-span-3">
+          <!-- Mobile Filter Toggle -->
+          <details
+            class="lg:hidden w-full mb-4 bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800"
+          >
+            <summary
+              class="flex items-center justify-between px-4 py-4 bg-slate-50 dark:bg-slate-800 text-sm font-bold cursor-pointer list-none rounded-xl"
+            >
+              <span class="flex items-center gap-2">
+                <span class="text-lg">🔍</span>
+                <span>FILTERS & CATEGORIES</span>
+              </span>
+              <span class="text-lg transition-transform group-open:rotate-180"
+                >▼</span
+              >
+            </summary>
+            <div class="p-4 border-t border-slate-200 dark:border-slate-700">
+              <!-- Mobile Filter Content (same as desktop for consistency) -->
+              <div class="space-y-6">
+                <!-- Categories -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3 flex items-center gap-2">
+                    <span class="text-primary">🎮</span> Categories
+                  </h4>
+                  <ul class="space-y-2 text-sm">
+                    <li>
+                      <a href="#" class="text-primary font-medium"
+                        >All Gaming</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary">Video Games</a>
+                    </li>
+                    <li><a href="#" class="hover:text-primary">Consoles</a></li>
+                    <li>
+                      <a href="#" class="hover:text-primary">Gaming PCs</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary">Components</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary">Peripherals</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary">Monitors</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary">Chairs & Desks</a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary"
+                        >VR & Accessories</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="hover:text-primary">Merchandise</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Price Range -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3">💰 Price Range</h4>
+                  <div class="space-y-2">
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Under $25</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      $25 - $50</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      $50 - $100</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      $100 - $250</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      $250 - $500</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Over $500</label
+                    >
+                  </div>
+                </div>
+
+                <!-- Platform -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3">🕹️ Platform</h4>
+                  <div class="space-y-2">
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      PC</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      PlayStation 5</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Xbox Series X|S</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Nintendo Switch</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      PlayStation 4</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Xbox One</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Retro/Classic</label
+                    >
+                  </div>
+                </div>
+
+                <!-- Brands -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3">🏷️ Brands</h4>
+                  <div class="space-y-2">
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Sony</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Microsoft</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Nintendo</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Razer</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Logitech</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Corsair</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      SteelSeries</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      ASUS ROG</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      MSI</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Alienware</label
+                    >
+                  </div>
+                </div>
+
+                <!-- Game Genre -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3">🎲 Game Genre</h4>
+                  <div class="space-y-2">
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Action / Adventure</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      RPG</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Shooter</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Strategy</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Sports / Racing</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Simulation</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Fighting</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Horror</label
+                    >
+                  </div>
+                </div>
+
+                <!-- Component Type -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3">⚙️ Component Type</h4>
+                  <div class="space-y-2">
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Graphics Cards</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Processors (CPU)</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Motherboards</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      RAM</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Storage (SSD/HDD)</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Power Supplies</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Cooling</label
+                    >
+                  </div>
+                </div>
+
+                <!-- Peripheral Type -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3">🖱️ Peripheral Type</h4>
+                  <div class="space-y-2">
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Keyboards</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Mice</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Headsets</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Controllers</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Mousepads</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      Webcams / Stream Gear</label
+                    >
+                  </div>
+                </div>
+
+                <!-- Features -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3">✨ Features</h4>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                      >RGB Lighting</span
+                    >
+                    <span
+                      class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                      >Mechanical</span
+                    >
+                    <span
+                      class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                      >Wireless</span
+                    >
+                    <span
+                      class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                      >4K / 120Hz</span
+                    >
+                    <span
+                      class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                      >Ray Tracing</span
+                    >
+                    <span
+                      class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                      >VR Ready</span
+                    >
+                    <span
+                      class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                      >Hot-Swap</span
+                    >
+                  </div>
+                </div>
+
+                <!-- Ratings -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3">⭐ Customer Ratings</h4>
+                  <div class="space-y-2">
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      ★★★★ & up (1.4k)</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      ★★★ & up (2.9k)</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      ★★ & up (4.2k)</label
+                    >
+                  </div>
+                </div>
+
+                <!-- Discount -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3">🏷️ Discount</h4>
+                  <div class="space-y-2">
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      10% or more</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      20% or more</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      30% or more</label
+                    >
+                    <label class="flex items-center gap-2 text-sm"
+                      ><input
+                        type="checkbox"
+                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                      />
+                      40% or more</label
+                    >
+                  </div>
+                </div>
+
+                <!-- Availability -->
+                <div>
+                  <h4 class="font-bold text-sm mb-3">📦 Availability</h4>
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    In Stock</label
+                  >
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <!-- Desktop Filters (same content, sticky) -->
+          <div
+            class="hidden lg:block bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 p-5 sticky top-24"
+          >
+            <h3 class="font-bold text-lg mb-5 flex items-center gap-2">
+              <span class="text-primary text-xl">🔍</span> Filters
+            </h3>
+            <div class="space-y-6 max-h-[600px] overflow-y-auto pr-2">
+              <!-- Categories -->
+              <div>
+                <h4 class="font-bold text-sm mb-3 flex items-center gap-2">
+                  <span class="text-primary">🎮</span> Categories
+                </h4>
+                <ul class="space-y-2 text-sm">
+                  <li>
+                    <a href="#" class="text-primary font-medium">All Gaming</a>
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-primary">Video Games</a>
+                  </li>
+                  <li><a href="#" class="hover:text-primary">Consoles</a></li>
+                  <li>
+                    <a href="#" class="hover:text-primary">Gaming PCs</a>
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-primary">Components</a>
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-primary">Peripherals</a>
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-primary">Monitors</a>
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-primary">Chairs & Desks</a>
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-primary">VR & Accessories</a>
+                  </li>
+                  <li>
+                    <a href="#" class="hover:text-primary">Merchandise</a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Price Range -->
+              <div>
+                <h4 class="font-bold text-sm mb-3">💰 Price Range</h4>
+                <div class="space-y-2">
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Under $25</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    $25 - $50</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    $50 - $100</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    $100 - $250</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    $250 - $500</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Over $500</label
+                  >
+                </div>
+              </div>
+
+              <!-- Platform -->
+              <div>
+                <h4 class="font-bold text-sm mb-3">🕹️ Platform</h4>
+                <div class="space-y-2">
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    PC</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    PlayStation 5</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Xbox Series X|S</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Nintendo Switch</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    PlayStation 4</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Xbox One</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Retro/Classic</label
+                  >
+                </div>
+              </div>
+
+              <!-- Brands -->
+              <div>
+                <h4 class="font-bold text-sm mb-3">🏷️ Brands</h4>
+                <div class="space-y-2">
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Sony</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Microsoft</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Nintendo</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Razer</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Logitech</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Corsair</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    SteelSeries</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    ASUS ROG</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    MSI</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Alienware</label
+                  >
+                </div>
+              </div>
+
+              <!-- Game Genre -->
+              <div>
+                <h4 class="font-bold text-sm mb-3">🎲 Game Genre</h4>
+                <div class="space-y-2">
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Action / Adventure</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    RPG</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Shooter</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Strategy</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Sports / Racing</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Simulation</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Fighting</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Horror</label
+                  >
+                </div>
+              </div>
+
+              <!-- Component Type -->
+              <div>
+                <h4 class="font-bold text-sm mb-3">⚙️ Component Type</h4>
+                <div class="space-y-2">
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Graphics Cards</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Processors (CPU)</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Motherboards</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    RAM</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Storage (SSD/HDD)</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Power Supplies</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Cooling</label
+                  >
+                </div>
+              </div>
+
+              <!-- Peripheral Type -->
+              <div>
+                <h4 class="font-bold text-sm mb-3">🖱️ Peripheral Type</h4>
+                <div class="space-y-2">
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Keyboards</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Mice</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Headsets</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Controllers</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Mousepads</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    Webcams / Stream Gear</label
+                  >
+                </div>
+              </div>
+
+              <!-- Features -->
+              <div>
+                <h4 class="font-bold text-sm mb-3">✨ Features</h4>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                    >RGB Lighting</span
+                  >
+                  <span
+                    class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                    >Mechanical</span
+                  >
+                  <span
+                    class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                    >Wireless</span
+                  >
+                  <span
+                    class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                    >4K / 120Hz</span
+                  >
+                  <span
+                    class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                    >Ray Tracing</span
+                  >
+                  <span
+                    class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                    >VR Ready</span
+                  >
+                  <span
+                    class="px-3 py-1 border rounded-lg text-xs cursor-pointer hover:border-primary hover:text-primary"
+                    >Hot-Swap</span
+                  >
+                </div>
+              </div>
+
+              <!-- Ratings -->
+              <div>
+                <h4 class="font-bold text-sm mb-3">⭐ Customer Ratings</h4>
+                <div class="space-y-2">
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    ★★★★ & up (1.4k)</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    ★★★ & up (2.9k)</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    ★★ & up (4.2k)</label
+                  >
+                </div>
+              </div>
+
+              <!-- Discount -->
+              <div>
+                <h4 class="font-bold text-sm mb-3">🏷️ Discount</h4>
+                <div class="space-y-2">
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    10% or more</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    20% or more</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    30% or more</label
+                  >
+                  <label class="flex items-center gap-2 text-sm"
+                    ><input
+                      type="checkbox"
+                      class="rounded border-slate-300 text-primary focus:ring-primary"
+                    />
+                    40% or more</label
+                  >
+                </div>
+              </div>
+
+              <!-- Availability -->
+              <div>
+                <h4 class="font-bold text-sm mb-3">📦 Availability</h4>
+                <label class="flex items-center gap-2 text-sm"
+                  ><input
+                    type="checkbox"
+                    class="rounded border-slate-300 text-primary focus:ring-primary"
+                  />
+                  In Stock</label
+                >
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Product Listing Area (Main Content) -->
+        <div class="lg:col-span-9">
+          <!-- Toolbar -->
+          <div
+            class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 p-4 mb-6 flex flex-wrap items-center justify-between gap-4"
+          >
+            <div class="flex items-center gap-2">
+              <span class="text-sm font-medium">1,823 Products</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="flex items-center gap-2 text-sm">
+                <label for="sort" class="text-slate-500 hidden sm:block"
+                  >Sort by:</label
+                >
+                <select
+                  id="sort"
+                  class="bg-slate-100 dark:bg-slate-800 border-none rounded-lg text-sm p-2 focus:ring-primary"
+                >
+                  <option>Featured</option>
+                  <option>Price: Low to High</option>
+                  <option>Price: High to Low</option>
+                  <option>Newest Arrivals</option>
+                  <option>Top Rated</option>
+                </select>
+              </div>
+              <div class="flex gap-1 border-l pl-4 border-slate-200">
+                <button class="p-2 bg-primary/10 rounded-lg text-primary">
+                  <span class="text-lg">⊞</span>
+                </button>
+                <button class="p-2 hover:bg-slate-100 rounded-lg">
+                  <span class="text-lg">☷</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Grid - Gaming -->
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <!-- Product Card 1 - PS5 Console -->
+            <div
+              class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100 dark:border-slate-800"
+            >
+              <div class="relative aspect-square overflow-hidden bg-slate-100">
+                <img
+                  class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  src="https://gmedia.playstation.com/is/image/SIEPDC/ps5-console-dualsense-01-en-24sep20?$facebook$"
+                  alt="PlayStation 5 Console"
+                />
+                <span
+                  class="absolute top-2 left-2 bg-primary text-white text-xs font-black px-2 py-1 rounded"
+                  >Bundle</span
+                >
+                <button
+                  class="absolute top-2 right-2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-slate-400 hover:text-red-500 transition-colors"
+                >
+                  <span class="text-lg">❤️</span>
+                </button>
+              </div>
+              <div class="p-3">
+                <p class="text-xs text-slate-400 mb-1">Sony • Console</p>
+                <h4
+                  class="font-bold text-sm mb-1 line-clamp-2 group-hover:text-primary transition-colors"
+                >
+                  PlayStation 5 Console (Slim) + Controller
+                </h4>
+                <div class="flex items-center gap-1 mb-2">
+                  <span class="text-yellow-500 text-sm">★★★★★</span>
+                  <span class="text-[10px] text-slate-400">(4.1k)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-lg font-black text-primary">$499</span>
+                  <span class="text-xs text-slate-400 line-through">$549</span>
+                </div>
+                <button
+                  class="w-full mt-3 bg-primary text-white py-2 rounded-lg font-bold text-xs uppercase opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Product Card 2 - RTX 4080 -->
+            <div
+              class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100 dark:border-slate-800"
+            >
+              <div class="relative aspect-square overflow-hidden bg-slate-100">
+                <img
+                  class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  src="https://m.media-amazon.com/images/I/81S5XxLxKGL._AC_SL1500_.jpg"
+                  alt="NVIDIA RTX 4080"
+                />
+                <span
+                  class="absolute top-2 left-2 bg-primary text-white text-xs font-black px-2 py-1 rounded"
+                  >-10%</span
+                >
+                <button
+                  class="absolute top-2 right-2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-slate-400 hover:text-red-500 transition-colors"
+                >
+                  <span class="text-lg">❤️</span>
+                </button>
+              </div>
+              <div class="p-3">
+                <p class="text-xs text-slate-400 mb-1">NVIDIA • GPU</p>
+                <h4
+                  class="font-bold text-sm mb-1 line-clamp-2 group-hover:text-primary transition-colors"
+                >
+                  GeForce RTX 4080 16GB GDDR6X
+                </h4>
+                <div class="flex items-center gap-1 mb-2">
+                  <span class="text-yellow-500 text-sm">★★★★★</span>
+                  <span class="text-[10px] text-slate-400">(2.3k)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-lg font-black text-primary">$1,199</span>
+                  <span class="text-xs text-slate-400 line-through"
+                    >$1,299</span
+                  >
+                </div>
+                <button
+                  class="w-full mt-3 bg-primary text-white py-2 rounded-lg font-bold text-xs uppercase opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Product Card 3 - Razer BlackWidow V4 -->
+            <div
+              class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100 dark:border-slate-800"
+            >
+              <div class="relative aspect-square overflow-hidden bg-slate-100">
+                <img
+                  class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  src="https://assets2.razerzone.com/images/blackwidow-v4/blackwidow-v4-75-usp1.jpg"
+                  alt="Razer BlackWidow V4"
+                />
+                <span
+                  class="absolute top-2 left-2 bg-primary text-white text-xs font-black px-2 py-1 rounded"
+                  >New</span
+                >
+                <button
+                  class="absolute top-2 right-2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-slate-400 hover:text-red-500 transition-colors"
+                >
+                  <span class="text-lg">❤️</span>
+                </button>
+              </div>
+              <div class="p-3">
+                <p class="text-xs text-slate-400 mb-1">Razer • Keyboard</p>
+                <h4
+                  class="font-bold text-sm mb-1 line-clamp-2 group-hover:text-primary transition-colors"
+                >
+                  BlackWidow V4 Pro Mechanical Keyboard
+                </h4>
+                <div class="flex items-center gap-1 mb-2">
+                  <span class="text-yellow-500 text-sm">★★★★★</span>
+                  <span class="text-[10px] text-slate-400">(1.2k)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-lg font-black text-primary">$189.99</span>
+                  <span class="text-xs text-slate-400 line-through"
+                    >$229.99</span
+                  >
+                </div>
+                <button
+                  class="w-full mt-3 bg-primary text-white py-2 rounded-lg font-bold text-xs uppercase opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Product Card 4 - Zelda: Tears of the Kingdom -->
+            <div
+              class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100 dark:border-slate-800"
+            >
+              <div class="relative aspect-square overflow-hidden bg-slate-100">
+                <img
+                  class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  src="https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.5/c_scale,w_700/ncom/en_US/games/switch/t/the-legend-of-zelda-tears-of-the-kingdom-switch/hero"
+                  alt="Zelda Tears of the Kingdom"
+                />
+                <span
+                  class="absolute top-2 left-2 bg-primary text-white text-xs font-black px-2 py-1 rounded"
+                  >-15%</span
+                >
+                <button
+                  class="absolute top-2 right-2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-slate-400 hover:text-red-500 transition-colors"
+                >
+                  <span class="text-lg">❤️</span>
+                </button>
+              </div>
+              <div class="p-3">
+                <p class="text-xs text-slate-400 mb-1">Nintendo • Switch</p>
+                <h4
+                  class="font-bold text-sm mb-1 line-clamp-2 group-hover:text-primary transition-colors"
+                >
+                  The Legend of Zelda: Tears of the Kingdom
+                </h4>
+                <div class="flex items-center gap-1 mb-2">
+                  <span class="text-yellow-500 text-sm">★★★★★</span>
+                  <span class="text-[10px] text-slate-400">(3.7k)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-lg font-black text-primary">$59.99</span>
+                  <span class="text-xs text-slate-400 line-through"
+                    >$69.99</span
+                  >
+                </div>
+                <button
+                  class="w-full mt-3 bg-primary text-white py-2 rounded-lg font-bold text-xs uppercase opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Product Card 5 - Logitech G Pro X Superlight -->
+            <div
+              class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100 dark:border-slate-800"
+            >
+              <div class="relative aspect-square overflow-hidden bg-slate-100">
+                <img
+                  class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  src="https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-superlight/pro-x-superlight-black-gallery-1.png?v=1"
+                  alt="Logitech G Pro X Superlight"
+                />
+                <span
+                  class="absolute top-2 left-2 bg-primary text-white text-xs font-black px-2 py-1 rounded"
+                  >-20%</span
+                >
+                <button
+                  class="absolute top-2 right-2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-slate-400 hover:text-red-500 transition-colors"
+                >
+                  <span class="text-lg">❤️</span>
+                </button>
+              </div>
+              <div class="p-3">
+                <p class="text-xs text-slate-400 mb-1">Logitech G • Mouse</p>
+                <h4
+                  class="font-bold text-sm mb-1 line-clamp-2 group-hover:text-primary transition-colors"
+                >
+                  PRO X Superlight Wireless Gaming Mouse
+                </h4>
+                <div class="flex items-center gap-1 mb-2">
+                  <span class="text-yellow-500 text-sm">★★★★★</span>
+                  <span class="text-[10px] text-slate-400">(2.9k)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-lg font-black text-primary">$129.99</span>
+                  <span class="text-xs text-slate-400 line-through"
+                    >$159.99</span
+                  >
+                </div>
+                <button
+                  class="w-full mt-3 bg-primary text-white py-2 rounded-lg font-bold text-xs uppercase opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Product Card 6 - Samsung Odyssey G7 Monitor -->
+            <div
+              class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100 dark:border-slate-800"
+            >
+              <div class="relative aspect-square overflow-hidden bg-slate-100">
+                <img
+                  class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  src="https://images.samsung.com/is/image/samsung/p6pim/au/ls28bg700eexxy/gallery/au-odyssey-g7-bg70-ls28bg700eexxy-535750200?$650_519_PNG$"
+                  alt="Samsung Odyssey G7"
+                />
+                <span
+                  class="absolute top-2 left-2 bg-primary text-white text-xs font-black px-2 py-1 rounded"
+                  >-12%</span
+                >
+                <button
+                  class="absolute top-2 right-2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-slate-400 hover:text-red-500 transition-colors"
+                >
+                  <span class="text-lg">❤️</span>
+                </button>
+              </div>
+              <div class="p-3">
+                <p class="text-xs text-slate-400 mb-1">Samsung • Monitor</p>
+                <h4
+                  class="font-bold text-sm mb-1 line-clamp-2 group-hover:text-primary transition-colors"
+                >
+                  28" Odyssey G7 4K 144Hz Gaming Monitor
+                </h4>
+                <div class="flex items-center gap-1 mb-2">
+                  <span class="text-yellow-500 text-sm">★★★★★</span>
+                  <span class="text-[10px] text-slate-400">(1.1k)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-lg font-black text-primary">$549.99</span>
+                  <span class="text-xs text-slate-400 line-through"
+                    >$629.99</span
+                  >
+                </div>
+                <button
+                  class="w-full mt-3 bg-primary text-white py-2 rounded-lg font-bold text-xs uppercase opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Product Card 7 - Xbox Series X -->
+            <div
+              class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100 dark:border-slate-800"
+            >
+              <div class="relative aspect-square overflow-hidden bg-slate-100">
+                <img
+                  class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4mRni?ver=98f0&q=90&m=6&h=705&w=1253&b=%23FFFFFFFF&l=f&o=t&aim=true"
+                  alt="Xbox Series X"
+                />
+                <span
+                  class="absolute top-2 left-2 bg-primary text-white text-xs font-black px-2 py-1 rounded"
+                  >Bundle</span
+                >
+                <button
+                  class="absolute top-2 right-2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-slate-400 hover:text-red-500 transition-colors"
+                >
+                  <span class="text-lg">❤️</span>
+                </button>
+              </div>
+              <div class="p-3">
+                <p class="text-xs text-slate-400 mb-1">Microsoft • Console</p>
+                <h4
+                  class="font-bold text-sm mb-1 line-clamp-2 group-hover:text-primary transition-colors"
+                >
+                  Xbox Series X 1TB + Extra Controller
+                </h4>
+                <div class="flex items-center gap-1 mb-2">
+                  <span class="text-yellow-500 text-sm">★★★★★</span>
+                  <span class="text-[10px] text-slate-400">(3.0k)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-lg font-black text-primary">$499</span>
+                  <span class="text-xs text-slate-400 line-through">$559</span>
+                </div>
+                <button
+                  class="w-full mt-3 bg-primary text-white py-2 rounded-lg font-bold text-xs uppercase opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Product Card 8 - Secretlab Titan Evo Chair -->
+            <div
+              class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100 dark:border-slate-800"
+            >
+              <div class="relative aspect-square overflow-hidden bg-slate-100">
+                <img
+                  class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  src="https://cdn.secretlab.co/theme/common/2024/titan-evo-nano-gen-2/hero/TitanEvo_NanoGen2_Stealth_Website_Main_Desktop.jpg"
+                  alt="Secretlab Titan Evo"
+                />
+                <span
+                  class="absolute top-2 left-2 bg-primary text-white text-xs font-black px-2 py-1 rounded"
+                  >New</span
+                >
+                <button
+                  class="absolute top-2 right-2 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center text-slate-400 hover:text-red-500 transition-colors"
+                >
+                  <span class="text-lg">❤️</span>
+                </button>
+              </div>
+              <div class="p-3">
+                <p class="text-xs text-slate-400 mb-1">Secretlab • Chair</p>
+                <h4
+                  class="font-bold text-sm mb-1 line-clamp-2 group-hover:text-primary transition-colors"
+                >
+                  Titan Evo 2022 Series (Stealth)
+                </h4>
+                <div class="flex items-center gap-1 mb-2">
+                  <span class="text-yellow-500 text-sm">★★★★★</span>
+                  <span class="text-[10px] text-slate-400">(854)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-lg font-black text-primary">$549</span>
+                </div>
+                <button
+                  class="w-full mt-3 bg-primary text-white py-2 rounded-lg font-bold text-xs uppercase opacity-0 group-hover:opacity-100 transition-opacity"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Featured Promo Strip - Gaming Deals -->
+          <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div
+              class="bg-gradient-to-r from-indigo-800 to-purple-800 rounded-xl p-6 text-white"
+            >
+              <h4 class="text-lg font-black mb-2">🎧 Audio Upgrade</h4>
+              <p class="text-sm opacity-90 mb-4">
+                Buy any gaming headset, get 20% off a streaming mic
+              </p>
+              <button
+                class="bg-white text-indigo-900 px-6 py-2 rounded-lg font-bold text-sm hover:scale-105 transition-transform"
+              >
+                Shop Headsets
+              </button>
+            </div>
+            <div
+              class="bg-gradient-to-r from-orange-700 to-red-700 rounded-xl p-6 text-white"
+            >
+              <h4 class="text-lg font-black mb-2">⚡ RGB Ready</h4>
+              <p class="text-sm opacity-90 mb-4">
+                Build your dream PC with our component bundles
+              </p>
+              <button
+                class="bg-white text-orange-800 px-6 py-2 rounded-lg font-bold text-sm hover:scale-105 transition-transform"
+              >
+                Start Build
+              </button>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <div class="mt-8 flex justify-center items-center gap-2">
+            <button
+              class="w-10 h-10 rounded-lg border border-slate-200 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+            >
+              «
+            </button>
+            <button
+              class="w-10 h-10 rounded-lg bg-primary text-white flex items-center justify-center font-bold"
+            >
+              1
+            </button>
+            <button
+              class="w-10 h-10 rounded-lg border border-slate-200 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+            >
+              2
+            </button>
+            <button
+              class="w-10 h-10 rounded-lg border border-slate-200 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+            >
+              3
+            </button>
+            <button
+              class="w-10 h-10 rounded-lg border border-slate-200 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+            >
+              4
+            </button>
+            <span class="px-2">...</span>
+            <button
+              class="w-10 h-10 rounded-lg border border-slate-200 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+            >
+              32
+            </button>
+            <button
+              class="w-10 h-10 rounded-lg border border-slate-200 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+            >
+              »
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Newsletter Section -->
+      <section
+        class="mt-20 bg-primary/10 rounded-2xl p-8 lg:p-12 border border-primary/20"
+      >
+        <div
+          class="flex flex-col lg:flex-row items-center justify-between gap-8"
+        >
+          <div class="text-center lg:text-left">
+            <h3 class="text-3xl font-black text-slate-900 dark:text-white mb-2">
+              Join the ShopSphere Club
+            </h3>
+            <p class="text-slate-600 dark:text-slate-400 max-w-md">
+              Subscribe to get notifications on our best deals, new arrivals,
+              and exclusive vouchers.
+            </p>
+          </div>
+          <div class="flex flex-col sm:flex-row w-full max-w-lg gap-3">
+            <input
+              class="flex-1 px-6 py-4 rounded-xl bg-white dark:bg-slate-800 border-none focus:ring-2 focus:ring-primary shadow-sm"
+              placeholder="Enter your email address"
+              type="email"
+            />
+            <button
+              class="bg-primary text-white font-bold px-10 py-4 rounded-xl shadow-lg hover:scale-105 transition-transform uppercase tracking-wider"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-20 bg-slate-900 text-slate-300 py-16 px-4 lg:px-20">
+      <div
+        class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12"
+      >
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-2 mb-6 text-white">
+            <div class="bg-primary p-1 rounded">
+              <span class="text-2xl">🛒</span>
+            </div>
+            <h2 class="text-2xl font-black tracking-tighter uppercase">
+              ShopSphere
+            </h2>
+          </div>
+          <p class="mb-8 leading-relaxed max-w-sm">
+            ShopSphere is the world's most customer-centric online shopping
+            platform. We provide millions of items from electronics to home
+            essentials at the best prices with the fastest delivery.
+          </p>
+          <div class="flex gap-4">
+            <a
+              class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+              href="#"
+              ><span class="text-lg">🌐</span></a
+            >
+            <a
+              class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+              href="#"
+              ><span class="text-lg">📱</span></a
+            >
+            <a
+              class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+              href="#"
+              ><span class="text-lg">📷</span></a
+            >
+          </div>
+        </div>
+        <div>
+          <h4
+            class="text-white font-bold mb-6 uppercase tracking-widest text-xs"
+          >
+            Shop with us
+          </h4>
+          <ul class="flex flex-col gap-4 text-sm">
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Our Story</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Categories</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Special Offers</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >New Arrivals</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Gift Cards</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4
+            class="text-white font-bold mb-6 uppercase tracking-widest text-xs"
+          >
+            Customer Service
+          </h4>
+          <ul class="flex flex-col gap-4 text-sm">
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Help Center</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Track Your Order</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Shipping & Delivery</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Returns & Refunds</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-primary transition-colors" href="#"
+                >Terms & Conditions</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4
+            class="text-white font-bold mb-6 uppercase tracking-widest text-xs"
+          >
+            Stay Updated
+          </h4>
+          <div class="flex flex-col gap-4">
+            <p class="text-sm text-gray-400 mb-2">
+              Get the latest news and updates delivered to your inbox
+            </p>
+            <form class="flex flex-col gap-3">
+              <input
+                type="email"
+                placeholder="Your email address"
+                class="bg-slate-800 border border-slate-700 rounded-xl p-3 text-sm text-white placeholder:text-gray-500 focus:outline-none focus:border-primary transition-colors"
+              />
+              <button
+                class="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-4 rounded-xl transition-colors"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div
+        class="max-w-[1440px] mx-auto mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs opacity-60"
+      >
+        <p>© 2019 ShopSphere E-Commerce Ltd. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a class="hover:underline" href="#">Privacy Policy</a>
+          <a class="hover:underline" href="#">Cookie Policy</a>
+          <a class="hover:underline" href="#">Accessibility</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
